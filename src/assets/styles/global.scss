@@ -1,0 +1,23 @@
+//=========Tailwind-SCSS==========>
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+//=========Fontawesome-SCSS==========>
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
+//=========Clients-SCSS==========>
+@import 'includes/joblist';
+@import 'includes/faq';
+
+//=========Applicant-SCSS==========>
+@import 'includes/jobtabs';
+@import 'includes/schedule';
+
+//=========Common-SCSS==========>
+@import 'includes/layout';
+@import 'includes/custom';
+
+//=========Loader-SCSS==========>
+
+@import 'includes/loader';

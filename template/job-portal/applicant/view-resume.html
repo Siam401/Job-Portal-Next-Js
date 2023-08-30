@@ -1,0 +1,1225 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Portal - Applicant</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+    <!-- Styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="../styles.css" rel="stylesheet">
+</head>
+<body>
+
+<header class="fixed w-full shadow backdrop-blur-lg z-20 top-[0]">
+    <nav class="border-gray-200 py-2.5">
+        <div class="flex flex-wrap items-center justify-between lg:px-10 px-2 mx-auto">
+            <!-- drawer init and show -->
+            <div class="flex">
+                <button class="lg:hidden md:block" type="button" data-drawer-target="sidebar-multi-level-sidebar" data-drawer-toggle="sidebar-multi-level-sidebar" aria-controls="sidebar-multi-level-sidebar">
+                    <span class="block m-1 h-[2px] w-[15px] bg-[#000]"></span>
+                    <span class="block m-1 h-[2px] w-[35px] bg-[#000]"></span>
+                    <span class="block m-1 h-[2px] w-[25px] bg-[#000]"></span>
+                    <span class="block m-1 h-[2px] w-[30px] bg-[#000]"></span>
+                </button>
+                <a href="dashboard.html" class="flex items-center">
+                    <img src="../images/logo.png" class="lg:h-10 h-7 me-3 lg:ms-0 ms-2" alt="nextitlogo"/>
+                </a>
+            </div> 
+            <div class="flex items-center lg:order-2 lg:space-x-7 space-x-2">
+                <div class="items-center justify-between w-full lg:flex lg:w-auto lg:block hidden">
+                    <ul class="flex font-medium lg:flex-row lg:space-x-8 lg:space-y-0 lg:my-0 space-y-6 my-8 me-10">
+                        <li>
+                            <a href="../jobs.html" class="flex px-2 block text-[#000] font-semibold hover:text-[#39B54A]">
+                                <img class="me-3" src="../images/icons/job.svg" alt="icon"> View Jobs
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../index.html" class="flex px-2 block text-[#000] font-semibold hover:text-[#39B54A]">
+                                <img class="me-3" src="../images/icons/career.svg" alt="icon"> Career page
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../faq.html" class="flex px-2 block text-[#000] font-semibold hover:text-[#39B54A]">
+                                <img class="me-3" src="../images/icons/faq.svg" alt="icon"> FAQ
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <span>
+                    <a href="dashboard.html" class="flex items-center text-center h-[36px] w-[36px] rounded-full bg-[#CCDEF0] hover:bg-[#9bc8ff] ease-in-out duration-300">
+                        <img class="mx-auto" src="../images/icons/home.svg" alt="icon">                        
+                    </a>
+                </span>
+                <span>
+                    <!-- Notification menu -->
+                    <a href="#" id="dropdownNotificationButton" data-dropdown-toggle="dropdownNotification" data-dropdown-offset-distance="18" data-dropdown-offset-skidding="-150" data-dropdown-placement="bottom" class="flex relative items-center text-center h-[36px] w-[36px] rounded-full bg-[#CCDEF0] hover:bg-[#9bc8ff] ease-in-out duration-300">
+                        <img class="mx-auto" src="../images/icons/notification.svg" alt="icon">
+                        <span class="absolute right-[-2px] top-[0] w-[12px] h-[12px] bg-[#ff0000] rounded-full border-white border-2"></span>
+                    </a>
+                    <div id="dropdownNotification" class="z-20 hidden w-full max-w-sm bg-white shadow-lg shadow-[rgba(30,90,148,0.25)]" aria-labelledby="dropdownNotificationButton">
+                        <div class="block h-[40px] px-4 py-2 text-[16px] font-semibold text-center text-gray-700 bg-[#CCDEF0]">
+                            Notifications
+                        </div>
+                        <div class="divide-y divide-[#CCDEF0]">
+                            <a href="#" class="flex items-center px-4 py-3 hover:bg-[rgba(34,168,1,0.11)] ease-in-out transition">
+                                <div class="flex-shrink-0">
+                                    <img class="rounded-full w-14 h-14" src="../images/avatar.svg" alt="Jese image">
+                                </div>
+                                <div class="w-full pl-3">
+                                    <span class="text-md font-semibold text-[#22A801]">Job Confirmation</span>
+                                    <div class="text-gray-500 text-sm mb-1.5">Congrats! You have a job confirmation mail</div>
+                                    <div class="text-xs text-blue-600">a few moments ago</div>
+                                </div>
+                            </a>
+                            <a href="#" class="flex items-center px-4 py-3 hover:bg-[rgba(34,168,1,0.11)] opacity-70 hover:opacity-100 ease-in-out transition">
+                                <div class="flex-shrink-0">
+                                    <img class="rounded-full w-14 h-14" src="../images/avatar.svg" alt="Jese image">
+                                </div>
+                                <div class="w-full pl-3">
+                                    <span class="text-md font-semibold text-[#01468B]">Interview Invitation</span>
+                                    <div class="text-gray-500 text-sm mb-1.5">Congrats! You have a job confirmation mail</div>
+                                    <div class="text-xs text-blue-600">a few moments ago</div>
+                                </div>
+                            </a>
+                            <a href="#" class="flex items-center px-4 py-3 hover:bg-[rgba(34,168,1,0.11)] opacity-70 hover:opacity-100 ease-in-out transition">
+                                <div class="flex-shrink-0">
+                                    <img class="rounded-full w-14 h-14" src="../images/avatar.svg" alt="Jese image">
+                                </div>
+                                <div class="w-full pl-3">
+                                    <span class="text-md font-semibold text-[#01468B]">Interview Invitation</span>
+                                    <div class="text-gray-500 text-sm mb-1.5">Congrats! You have a job confirmation mail</div>
+                                    <div class="text-xs text-blue-600">a few moments ago</div>
+                                </div>
+                            </a>
+                            <a href="#" class="flex items-center px-4 py-3 hover:bg-[rgba(34,168,1,0.11)] opacity-70 hover:opacity-100 ease-in-out transition">
+                                <div class="flex-shrink-0">
+                                    <img class="rounded-full w-14 h-14" src="../images/avatar.svg" alt="Jese image">
+                                </div>
+                                <div class="w-full pl-3">
+                                    <span class="text-md font-semibold text-[#01468B]">Reviewed Resume</span>
+                                    <div class="text-gray-500 text-sm mb-1.5">Congrats! You have a job confirmation mail</div>
+                                    <div class="text-xs text-blue-600">a few moments ago</div>
+                                </div>
+                            </a>
+                        </div>
+                        <a href="notification.html" class="block py-2 text-sm font-medium text-center text-gray-900 bg-[#CCDEF0] hover:bg-[#bfdfff]">
+                            <div class="inline-flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-[#01468B]" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"></path></svg>
+                                View all
+                            </div>
+                        </a>
+                    </div>
+                </span>
+                <span class="block h-[18px] w-[2px] bg-[#CCDEF0]"></span>
+
+                <!-- Profile menu -->
+                <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" type="button" class="items-center space-x-2 text-[#000] hover:text-[#39B54A]">
+                    <div class="shrink-0">
+                        <img class="h-[50px] w-[50px] object-cover rounded-full" src="../images/avatar.svg" alt="profile">
+                    </div>
+                </button>
+                <div id="dropdown" class="z-10 hidden bg-white rounded-lg shadow-lg shadow-[rgba(30,90,148,0.25)] w-[310px]">
+                    <ul class="py-3 px-3 text-sm text-gray-700 text-center font-semibold bg-[#CCDEF0]" aria-labelledby="dropdownDividerButton">
+                        <div class="shrink-0 text-center mb-2">
+                            <img class="h-[80px] w-[80px] object-cover rounded-full mx-auto" src="../images/avatar.svg" alt="Current profile photo">
+                        </div>
+                        <p class="text-lg text-gray-900" role="none">
+                            Neil Sims
+                        </p>
+                        <p class="text-sm text-gray-600" role="none">
+                            neil.sims@flowbite.com
+                        </p>
+                    </ul>
+                    <ul class="text-gray-700 font-semibold" aria-labelledby="dropdownDividerButton">
+                        <li>
+                            <a href="#" data-modal-target="changepassModal" data-modal-toggle="changepassModal" class="block px-4 py-4 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#39B54A]">
+                                <i class="fa fa-light fa-key w-4 text-center"></i> Change Password
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="p-3 text-gray-700 font-semibold border-t" aria-labelledby="dropdownDividerButton">
+                        <li>
+                            <a href="../index.html" class="block px-4 py-4 rounded-lg text-center text-gray-700 bg-gray-100 hover:bg-gray-200 hover:text-[#FE0101] ease-in-out transition"><i class="fa fa-light fa-arrow-right-from-bracket w-4 text-center"></i> Sign Out</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="items-center justify-between w-full lg:flex lg:w-auto lg:hidden block fixed bottom-0 left-0 top-auto w-full bg-gray-100 z-50 drop-shadow-[0px_3px_15px_rgba(0,0,0,0.15)]">
+    <ul class="grid grid-cols-3 gap-3 py-3">
+        <li>
+            <a href="../jobs.html" class="flex px-2 block text-[#000] font-semibold hover:text-[#39B54A] text-center">
+                <img class="mx-auto" src="../images/icons/jobs.svg" alt="icon">
+            </a>
+        </li>
+        <li>
+            <a href="../index.html" class="flex px-2 block text-[#000] font-semibold hover:text-[#39B54A] text-center">
+                <img class="mx-auto" src="../images/icons/careers.svg" alt="icon">
+            </a>
+        </li>
+        <li>
+            <a href="../faq.html" class="flex px-2 block text-[#000] font-semibold hover:text-[#39B54A] text-center">
+                <img class="mx-auto" src="../images/icons/faqs.svg" alt="icon">
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+<!------Side-Menu------->
+<aside id="sidebar-multi-level-sidebar" class="fixed lg:top-[71px] top-[0] left-0 z-40 w-64 h-screen shadow transition-transform lg:translate-x-0 -translate-x-full border-r" aria-label="Sidebar">
+    <button type="button" data-drawer-hide="sidebar-multi-level-sidebar" aria-controls="sidebar-multi-level-sidebar" class="lg:hidden block text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center" >
+        <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        <span class="sr-only">Close menu</span>
+    </button>
+    <div class="h-full px-3 py-4 overflow-y-auto bg-white">
+        <a href="dashboard.html" class="lg:hidden block mb-4">
+            <img src="../images/logo.png" class="h-15 mr-3 h-10" alt="nextitlogo"/>
+        </a>
+        <ul class="space-y-2 font-medium">
+            <li>
+                <a href="dashboard.html" class="flex items-center p-2 font-semibold text-[16px] text-[#01468B] rounded-md hover:bg-gray-100 grayscale-0 hover:grayscale-0">
+                    <span class="w-[26px]">
+                        <img class="mx-auto" src="../images/icons/dashboard.svg" alt="icon">
+                    </span>
+                    <span class="ml-3">Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="view-resume.html" class="flex items-center p-2 font-semibold text-[16px] text-[#01468B] rounded-md hover:bg-gray-100 grayscale hover:grayscale-0">
+                    <span class="w-[26px]">
+                        <img class="mx-auto" src="../images/icons/view.svg" alt="icon">
+                    </span>
+                    <span class="flex-1 ml-3 whitespace-nowrap">View Resume</span>
+                </a>
+            </li>
+            <li>
+                <button type="button" class="flex items-center w-full p-2 font-semibold text-[16px] text-[#01468B] transition duration-75 group rounded-md hover:bg-gray-100 grayscale hover:grayscale-0" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                    <span class="w-[26px]">
+                        <img class="mx-auto" src="../images/icons/edit-resume.svg" alt="icon">
+                    </span>
+                    <span class="flex-1 ml-3 text-left whitespace-nowrap" sidebar-toggle-item>Edit Resume</span>
+                    <svg sidebar-toggle-item class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </button>
+                <ul id="dropdown-example" class="hidden py-2 space-y-2 border-y">
+                    <li>
+                        <a href="personal-info.html" class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-12 group hover:bg-gray-100 font-semibold text-gray-600 hover:text-[#01468B]">Personal Information</a>
+                    </li>
+                    <li>
+                        <a href="education.html" class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-12 group hover:bg-gray-100 font-semibold text-gray-600 hover:text-[#01468B]">Education & Training</a>
+                    </li>
+                    <li>
+                        <a href="employment.html" class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-12 group hover:bg-gray-100 font-semibold text-gray-600 hover:text-[#01468B]">Employment</a>
+                    </li>
+                    <li>
+                        <a href="other-info.html" class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-12 group hover:bg-gray-100 font-semibold text-gray-600 hover:text-[#01468B]">Other Information</a>
+                    </li>
+                    <li>
+                        <a href="photograph.html" class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-12 group hover:bg-gray-100 font-semibold text-gray-600 hover:text-[#01468B]">Photograph</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" data-modal-target="defaultModal" data-modal-toggle="defaultModal" class="flex items-center p-2 font-semibold text-[16px] text-[#01468B] rounded-md hover:bg-gray-100 grayscale hover:grayscale-0">
+                    <span class="w-[26px]">
+                        <img class="mx-auto" src="../images/icons/upload-resume.svg" alt="icon">
+                    </span>
+                    <span class="flex-1 ml-3 whitespace-nowrap">Upload Resume</span>
+                </a>
+            </li>
+            <li>
+                <a href="notification.html" class="flex items-center p-2 font-semibold text-[16px] text-[#01468B] rounded-md hover:bg-gray-100 grayscale hover:grayscale-0">
+                    <span class="w-[26px]">
+                        <img class="mx-auto" src="../images/icons/notification.svg" alt="icon">
+                    </span>
+                    <span class="flex-1 ml-3 whitespace-nowrap">Notification</span>
+                    <span class="inline-flex items-center justify-center w-3 h-3 p-3 ml-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full">3</span>
+                </a>
+            </li>
+            <li>
+                <a href="help.html" class="flex items-center p-2 font-semibold text-[16px] text-[#01468B] rounded-md hover:bg-gray-100 grayscale hover:grayscale-0">
+                    <span class="w-[26px]">
+                        <img class="mx-auto" src="../images/icons/help.svg" alt="icon">
+                    </span>
+                    <span class="flex-1 ml-3 whitespace-nowrap">Help</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</aside>
+
+
+<div class="lg:ml-64 ml-0 mt-[70px]">
+    <div class="py-8">
+        <div class="mx-auto w-auto table">
+            <h3 class="text-center text-[17px] font-bold text-[#777] uppercase mb-2">Download</h3>
+            <div class="flex items-center justify-center mb-5">
+                <a href="#" class="block w-auto mx-4 hover:opacity-75 transition ease-in-out" data-tooltip-target="tooltip-word" data-tooltip-placement="bottom">
+                    <img src="../images/word.svg" alt="word">
+                </a>
+                <a href="#" class="block w-auto mx-4 hover:opacity-75 transition ease-in-out" data-tooltip-target="tooltip-pdf" data-tooltip-placement="bottom">
+                    <img src="../images/pdf.svg" alt="pdf">
+                </a>
+                <div id="tooltip-word" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-1 text-sm font-semibold text-white transition-opacity duration-300 bg-[#000] rounded-lg shadow-sm opacity-0">
+                    Word Format
+                </div>
+                <div id="tooltip-pdf" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-1 text-sm font-semibold text-white transition-opacity duration-300 bg-[#000] rounded-lg shadow-sm opacity-0">
+                    PDF Format
+                </div>
+            </div>
+        </div>
+        <div class="mx-auto w-[850px] shadow-lg rounded-lg border border-[#E5E7EB]">
+            <div id="resume" class="my-10" style="font-family:Verdana,Geneva,sans-serif;line-height:22px;color:#000;font-size:12px;font-weight:400;">	
+                <table width="750" cellspacing="0" cellpadding="0" border="0" align="center">
+                    <tbody>
+                        <tr>
+                            <td colspan="6">
+                                <table width="100%" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                        <tr>
+                                            <td width="73%" valign="bottom" height="" style="color:#222;font-size:20px;font-weight:900;">
+                                                Neil Sims
+                                            </td>
+                                            <td rowspan="2" width="27%" valign="bottom" align="right">
+                                                <!--Photograph:-->
+                                                <table width="140" height="140" cellspacing="7" cellpadding="0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td width="126" valign="middle" height="135">
+                                                                <img src="../images/avatar.svg" width="124" height="135">
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                
+                                        <tr>
+                                            <td class="BDJNormalText04" valign="middle" align="left">
+                                                Address: This is an example adress, Shantinagr TSO, Ramna, Dhaka 1217
+                                                <br>
+                                                Primary Mobile No: 01700-123456
+                                                <br>
+                                                Secondary Mobile No: 01700-123456
+                                                <br>
+                                                Primary Email: example@gmail.com
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <!----------CAREER OBJECTIVE---------->
+                <table width="750" cellspacing="0" cellpadding="0" border="0" align="center">
+                    <tbody>
+                        <tr>
+                            <td colspan="6" style="border-bottom:1px solid #000000;"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="6"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="6" style="background:#E6E6E6;font-size:12px;font-weight:bold;padding-left:2px;padding-top:2px;padding-bottom:2px;width:750px;"><u>Career Objective:</u></td>
+                        </tr>
+                        <tr>
+                            <td colspan="6" style="padding-left:5px;padding-top:7px;padding-bottom:10px;word-break:break-word;" class="BDJNormalText01" align="left">
+                                Seeking a position in a dynamic organization where I can launch my career and work towards building a strong skill set. A hard working individual 
+                                looking for a challenging position where I can showcase my skills and contribute to the growth of the organization.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <!-----------CAREER SUMMARY------------->
+                <table style="margin-top:3px;" width="750" cellspacing="0" cellpadding="0" border="0" align="center">
+                    <tbody>
+                        <tr>
+                            <td colspan="6" style="background:#E6E6E6;font-size:12px;font-weight:bold;padding-left:2px;padding-top:2px;padding-bottom:2px;width:750px;"><u>Career Summary:</u></td>
+                        </tr>
+                        <tr>
+                            <td colspan="6" style="padding-left:5px;padding-top:7px;padding-bottom:10px;word-break:break-word;" align="left">
+                                Self-motivated and cheerful customer service professional with 7+ years of experience helping customers navigate websites and resolving 
+                                product and service issues. Eager to support Book Me in building an impeccable online reputation by providing top-class customer support.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <!---------SPECIAL QUALIFICATION--------------->
+                <table style="margin-top:3px;" width="750" cellspacing="0" cellpadding="0" border="0" align="center">
+                    <tbody>
+                        <tr>
+                            <td colspan="6" style="background:#E6E6E6;font-size:12px;font-weight:bold;padding-left:2px;padding-top:2px;padding-bottom:2px;width:750px;"><u>Special Qualification:</u></td>
+                        </tr>
+                        <tr>
+                            <td colspan="6" style="padding-left:5px;padding-top:7px;padding-bottom:10px;word-break:break-word;" align="left">
+                                Active person, responsible, creative, flexible, achievement oriented and in constant evolution of my
+                                assigned jobs. I have hands on experience efficiently ability to learn quickly, determination to succeed,
+                                positive attitude and ability to relate to people and achieve a common goal.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <!----------EMPLOYMENT HISTORY, TOTAL YEAR OF EXPERIENCE--------------->
+                <table style="margin-top:3px;" width="750" cellspacing="0" cellpadding="0" border="0" align="center">
+                    <tbody>
+                        <tr>
+                            <td colspan="6" style="background:#E6E6E6;font-size:12px;font-weight:bold;padding-left:2px;padding-top:2px;padding-bottom:2px;width:750px;"><u>Employment History:</u></td>
+                        </tr>
+                        <tr>
+                            <td colspan="6" style="padding-left:5px;padding-top:7px;padding-bottom:10px;word-break:break-word;" class="BDJNormalText01" align="left">
+                                <strong>Total Year of Experience :</strong> 7.6 yrs
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+
+                <table style="margin-top:3px;line-height: 17px;" width="750" cellspacing="0" cellpadding="0" border="0" align="center">
+                    <tbody>
+                        <tr>
+                            <th style="padding-left:5px;" width="22" valign="top" align="center">
+                                1.
+                            </th>
+                            <th colspan="5" style="padding-bottom:10px;word-break:break-word;" width="750" valign="top" align="left">
+                                <!--Position, DateFrom, DateTo:-->
+                                Software Engineer (6.4 yrs)<br>
+                                <span style="font-weight:normal;">(March, 2017 - Continuing)</span><br>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td align="center"></td>
+                            <td colspan="5" style="padding-bottom:10px;word-break:break-word;" align="left">
+                                <strong>BrainStation</strong><br>
+                                <span class="BDJNormalText06">Banani, Dhaka</span><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center"></td>
+                            <td colspan="5" style="padding-bottom:10px;word-break:break-word;" align="left">
+                                <strong>Area of Expertise</strong><br>
+                                <span>.net (3.6 yrs), Angular JS (5.6 yrs), React (2.6 yrs)</span><br>
+                                <strong>Duties/Responsibilities</strong><br>
+                                • Develop user-facing features.<br>
+                                • Design frontend as per requirement.<br>
+                                • Ensure the technical feasibility of designs.<br>
+                                • Optimize application for maximum speed and scalability.<br>
+                                • Writing clean, high-quality, fresh &amp; maintainable code.<br>
+                                • Proficient understanding of web markup.<br>
+                                • Proficient understanding of client-side scripting Laravel Framework and JavaScript frameworks, including jQuery.<br>
+                                • Authoring tools, to be able to crop, resize, or perform adjustments on an image.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+
+                <table style="margin-top:3px; line-height: 17px;" width="750" cellspacing="0" cellpadding="0" border="0" align="center">
+                    <tbody>
+                        <tr>
+                            <th style="padding-left:5px;" width="22" valign="top" align="center">
+                                1.
+                            </th>
+                            <th colspan="5" style="padding-bottom:10px;word-break:break-word;" width="750" valign="top" align="left">
+                                <!--Position, DateFrom, DateTo:-->
+                                Software Engineer (1.2 yrs)<br>
+                                <span style="font-weight:normal;">(March, 2016 - March, 2017)</span><br>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td align="center"></td>
+                            <td colspan="5" style="padding-bottom:10px;word-break:break-word;" align="left">
+                                <strong>BrainStation</strong><br>
+                                <span class="BDJNormalText06">Banani, Dhaka</span><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center"></td>
+                            <td colspan="5" style="padding-bottom:10px;word-break:break-word;" align="left">
+                                <strong>Area of Expertise</strong><br>
+                                <span>.net (3.6 yrs), Angular JS (5.6 yrs), React (2.6 yrs)</span><br>
+                                <strong>Duties/Responsibilities</strong><br>
+                                • Develop user-facing features.<br>
+                                • Design frontend as per requirement.<br>
+                                • Ensure the technical feasibility of designs.<br>
+                                • Optimize application for maximum speed and scalability.<br>
+                                • Writing clean, high-quality, fresh &amp; maintainable code.<br>
+                                • Proficient understanding of web markup.<br>
+                                • Proficient understanding of client-side scripting Laravel Framework and JavaScript frameworks, including jQuery.<br>
+                                • Authoring tools, to be able to crop, resize, or perform adjustments on an image.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <!------------ACADEMIC QUALIFICATION--------------->
+                <table style="margin-top:3px;" width="750" cellspacing="0" cellpadding="0" border="0" align="center">
+                    <tbody>
+                        <tr>
+                            <td colspan="6" style="background:#E6E6E6;font-size:12px;font-weight:bold;padding-left:2px;padding-top:2px;padding-bottom:2px;width:750px;"><u>Academic Qualification:</u></td>
+                        </tr>
+                        <tr>
+                            <td colspan="6" style="padding-left:5px;padding-top:7px;padding-bottom:10px;" align="left">
+                                <table style="border:1px solid #666666;word-break: break-word;" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+                                    <tbody>
+                                        <tr>
+                                            <td style="border-right:1px solid #666666" width="20%" align="center"><strong>Exam Title</strong></td>
+                                            <td style="border-right:1px solid #666666" width="15%" align="center"><strong>Concentration/Major</strong></td>
+                                            <td style="border-right:1px solid #666666" width="15%" align="center"><strong>Institute</strong></td>
+                                            <td style="border-right:1px solid #666666" width="12.5%" align="center"><strong>Result</strong></td>
+                                            <td style="border-right:1px solid #666666" width="12.5%" align="center"><strong>Pas.Year</strong></td>
+                                            <td style="border-right:1px solid #666666" width="10%" align="center"><strong>Duration</strong></td>
+                                            <td width="15%" align="center"><strong>Achievement</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <!--Exam Title:-->
+                                            <td style="border-right:1px solid #666666;border-top:1px solid #666666;" width="20%" align="center">
+                                                Bachelor of Science (BSc)
+                                                
+                                            </td>
+                                            <!--Concentration/Major:-->
+                                            <td style="border-right:1px solid #666666;border-top:1px solid #666666;" width="15%" align="center">
+                                                Computer Science &amp; Engineering
+                                                
+                                            </td>
+                                            <!--Institute:-->
+                                            <td style="border-right:1px solid #666666;border-top:1px solid #666666;" width="15%" align="center">
+                                                Dhaka International University (DIU)
+                                                
+                                            </td>
+                                            <!--Result:-->
+                                            <td style="border-right:1px solid #666666;border-top:1px solid #666666;" width="12.5%" align="center">
+                                                3.66
+                                                
+                                            </td>
+                                            <!--Passing Year:-->
+                                            <td style="border-right:1px solid #666666;border-top:1px solid #666666;" width="12.5%" align="center">
+                                                2020
+                                                
+                                            </td>
+                                            <!--Duration:-->
+                                            <td style="border-right:1px solid #666666;border-top:1px solid #666666;" width="10%" align="center">
+                                                3 years
+                                                
+                                            </td>
+                                            <!--Achievement:-->
+                                            <td style="border-top:1px solid #666666;" width="15%" align="center">
+                                                BSc in CSE
+                                                
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <!--Exam Title:-->
+                                            <td style="border-right:1px solid #666666;border-top:1px solid #666666;" width="20%" align="center">
+                                                Diploma in Engineer
+                                                
+                                            </td>
+                                            <!--Concentration/Major:-->
+                                            <td style="border-right:1px solid #666666;border-top:1px solid #666666;" width="15%" align="center">
+                                                Computer Technology
+                                                
+                                            </td>
+                                            <!--Institute:-->
+                                            <td style="border-right:1px solid #666666;border-top:1px solid #666666;" width="15%" align="center">
+                                                Rajshahi Polytechnic Institute
+                                                
+                                            </td>
+                                            <!--Result:-->
+                                            <td style="border-right:1px solid #666666;border-top:1px solid #666666;" width="12.5%" align="center">
+                                                3.43
+                                                
+                                            </td>
+                                            <!--Passing Year:-->
+                                            <td style="border-right:1px solid #666666;border-top:1px solid #666666;" width="12.5%" align="center">
+                                                2016
+                                                
+                                            </td>
+                                            <!--Duration:-->
+                                            <td style="border-right:1px solid #666666;border-top:1px solid #666666;" width="10%" align="center">
+                                                4 years
+                                                
+                                            </td>
+                                            <!--Achievement:-->
+                                            <td style="border-top:1px solid #666666;" width="15%" align="center">
+                                                Diploma Engineer
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <!-----------TRAINING:Bdjobs-AMCAT Certification Test----------------->
+                <table style="margin-top:3px;" width="750" cellspacing="0" cellpadding="0" border="0" align="center">
+                    <tbody>
+                        <tr>
+                            <td colspan="6" style="background:#E6E6E6;font-size:12px;font-weight:bold;padding-left:2px;padding-top:2px;padding-bottom:2px;width:750px;"><u>Training Summary:</u></td>
+                        </tr>
+                        <tr>
+                            <td colspan="6" style="padding-left:5px;padding-top:7px;padding-bottom:10px;" align="left">
+                                <table style="border:1px solid #666666;word-break:break-word;" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+                                    <tbody>
+                                        <tr>
+                                            <td style="border-right:1px solid #666666" width="18%" align="center"><strong>Training Title</strong></td>
+                                            <td style="border-right:1px solid #666666" width="18%" align="center"><strong>Topic</strong></td>
+                                            <td style="border-right:1px solid #666666" width="15%" align="center"><strong>Institute</strong></td>
+                                            <td style="border-right:1px solid #666666" width="15%" align="center"><strong>Country</strong></td>
+                                            <td style="border-right:1px solid #666666" width="15%" align="center"><strong>Location</strong></td>
+                                            <td style="border-right:1px solid #666666" width="4%" align="center"><strong>Year</strong></td>
+                                            <td width="15%" align="center"><strong>Duration</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="border-right:1px solid #666666;border-top:1px solid #666666;" width="15%" align="center">
+                                                Web Design
+                                                
+                                            </td>
+                                            <td style="border-right:1px solid #666666;border-top:1px solid #666666; padding-left:1px;" width="15%" align="center">
+                                                Javascript, Jquery, Web development.
+                                                
+                                            </td>
+                                            <td style="border-right:1px solid #666666;border-top:1px solid #666666;" width="15%" align="center">
+                                                Daffodil institute of IT
+                                                
+                                            </td>
+                                            <td style="border-right:1px solid #666666;border-top:1px solid #666666;" width="15%" align="center">
+                                                Bangladesh
+                                                
+                                            </td>
+                                            <td style="border-right:1px solid #666666;border-top:1px solid #666666;" width="15%" align="center">
+                                                Kolabagan,panthpath,Dhaka.
+                                                
+                                            </td>
+                                            <td style="border-right:1px solid #666666;border-top:1px solid #666666;" width="10%" align="center">
+                                                2015
+                                                
+                                            </td>
+                                            <td style="border-top:1px solid #666666;" width="15%" align="center">
+                                                3.5 month
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="border-right:1px solid #666666;border-top:1px solid #666666;" width="15%" align="center">
+                                                Web Development
+                                                
+                                            </td>
+                                            <td style="border-right:1px solid #666666;border-top:1px solid #666666; padding-left:1px;" width="15%" align="center">
+                                                Laravel Framework, PHP
+                                                
+                                            </td>
+                                            <td style="border-right:1px solid #666666;border-top:1px solid #666666;" width="15%" align="center">
+                                                Daffodil institute of IT
+                                                
+                                            </td>
+                                            <td style="border-right:1px solid #666666;border-top:1px solid #666666;" width="15%" align="center">
+                                                Bangladesh
+                                                
+                                            </td>
+                                            <td style="border-right:1px solid #666666;border-top:1px solid #666666;" width="15%" align="center">
+                                                Kolabagan,panthpath,Dhaka.
+                                                
+                                            </td>
+                                            <td style="border-right:1px solid #666666;border-top:1px solid #666666;" width="10%" align="center">
+                                                2015
+                                                
+                                            </td>
+                                            <td style="border-top:1px solid #666666;" width="15%" align="center">
+                                                3.5 month
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="border-right:1px solid #666666;border-top:1px solid #666666;" width="15%" align="center">
+                                                Software Programming
+                                                
+                                            </td>
+                                            <td style="border-right:1px solid #666666;border-top:1px solid #666666; padding-left:1px;" width="15%" align="center">
+                                                React JS, Angular JS
+                                            </td>
+                                            <td style="border-right:1px solid #666666;border-top:1px solid #666666;" width="15%" align="center">
+                                                Daffodil Institute of IT
+                                                
+                                            </td>
+                                            <td style="border-right:1px solid #666666;border-top:1px solid #666666;" width="15%" align="center">
+                                                Bangladesh
+                                                
+                                            </td>
+                                            <td style="border-right:1px solid #666666;border-top:1px solid #666666;" width="15%" align="center">
+                                                Kolabagan,panthpath, Dhaka.
+                                                
+                                            </td>
+                                            <td style="border-right:1px solid #666666;border-top:1px solid #666666;" width="10%" align="center">
+                                                2015
+                                                
+                                            </td>
+                                            <td style="border-top:1px solid #666666;" width="15%" align="center">
+                                                1 month
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="border-right:1px solid #666666;border-top:1px solid #666666;" width="15%" align="center">
+                                                Software Programming
+                                                
+                                            </td>
+                                            <td style="border-right:1px solid #666666;border-top:1px solid #666666; padding-left:1px;" width="15%" align="center">
+                                                .net, Unity
+                                                
+                                            </td>
+                                            <td style="border-right:1px solid #666666;border-top:1px solid #666666;" width="15%" align="center">
+                                                Daffodil Institute of IT
+                                                
+                                            </td>
+                                            <td style="border-right:1px solid #666666;border-top:1px solid #666666;" width="15%" align="center">
+                                                Bangladesh
+                                                
+                                            </td>
+                                            <td style="border-right:1px solid #666666;border-top:1px solid #666666;" width="15%" align="center">
+                                                Kolabagan,panthpath, Dhaka.
+                                                
+                                            </td>
+                                            <td style="border-right:1px solid #666666;border-top:1px solid #666666;" width="10%" align="center">
+                                                2014
+                                                
+                                            </td>
+                                            <td style="border-top:1px solid #666666;" width="15%" align="center">
+                                                6 month
+                                                
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                
+                <!-------------PROFESSIONAL QUALIFICATION:---------------->
+                <table style="margin-top:3px;" width="750" cellspacing="0" cellpadding="0" border="0" align="center">
+                    <tbody>
+                        <tr>
+                            <td colspan="6" style="background:#E6E6E6;font-size:12px;font-weight:bold;padding-left:2px;padding-top:2px;padding-bottom:2px;width:750px;"><u>Professional Qualification:</u></td>
+                        </tr>
+                        <tr>
+                            <td colspan="6" style="padding-left:5px;padding-top:7px;padding-bottom:10px;" align="left">
+                                <table style="border:1px solid #666666;word-break:break-word;" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+                                    <tbody>
+                                        <tr>
+                                            <td style="border-right:1px solid #666666" width="25%" align="center"><strong>Certification</strong></td>
+                                            <td style="border-right:1px solid #666666" width="25%" align="center"><strong>Institute</strong></td>
+                                            <td style="border-right:1px solid #666666" width="25%" align="center"><strong>Location</strong></td>
+                                            <td style="border-right:1px solid #666666" width="12.5%" align="center"><strong>From</strong></td>
+                                            <td width="12.5%" align="center"><strong>To</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="border-right:1px solid #666666;border-top:1px solid #666666;" width="25%" align="center">
+                                                Software Engineer
+                                                
+                                            </td>
+                                            <td style="border-right:1px solid #666666;border-top:1px solid #666666;" width="25%" align="center">
+                                                TechnoSoft
+                                                
+                                            </td>
+                                            <td style="border-right:1px solid #666666;border-top:1px solid #666666;" width="25%" align="center">
+                                                HouseBuilding, Uttara, Dhaka-1230
+                                                
+                                            </td>
+                                            <td style="border-right:1px solid #666666;border-top:1px solid #666666;" width="12.5%" align="center">
+                                                January 3, 2016
+                                                
+                                            </td>
+                                            <td style="border-top:1px solid #666666;" width="12.5%" align="center">
+                                                January 31, 2017
+                                                
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <!--------------CAREER AND APPLICATION INFORMATION:--------------------->
+                <table style="margin-top:3px;" width="750" cellspacing="0" cellpadding="0" border="0" align="center">
+                    <tbody>
+                        <tr>
+                            <td colspan="6" style="background:#E6E6E6;font-size:12px;font-weight:bold;padding-left:2px;padding-top:2px;padding-bottom:2px;width:750px;"><u>Career and Application Information:</u></td>
+                        </tr>
+                        <tr>
+                            <td colspan="6" style="padding-left:5px;padding-top:7px;padding-bottom:10px;" align="left">
+                                <table width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+                                    <tbody>
+                                        <tr>
+                                            <td style="padding-left:5px;" width="32%" align="left">Looking For</td>
+                                            <td width="2%" align="center">:</td>
+                                            <td width="66%" align="left">Top Level Job</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding-left:5px;" width="32%" align="left">Available For</td>
+                                            <td width="2%" align="center">:</td>
+                                            <td width="66%" align="left">Full Time</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding-left:5px;" width="32%" align="left">Present Salary</td>
+                                            <td width="2%" align="center">:</td>
+                                            <td width="66%" align="left">Tk. 45000</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding-left:5px;" width="32%" align="left">Expected Salary</td>
+                                            <td width="2%" align="center">:</td>
+                                            <td width="66%" align="left">Tk. 60000</td>
+                                        </tr>
+                                        <!--Preferred Job Category:-->
+                                        <tr>
+                                            <td style="padding-left:5px;" width="32%" align="left">Preferred Job Category</td>
+                                            <td width="2%" align="center">:</td>
+                                            <td width="66%" align="left">IT/Telecommunication, Design/Creative, Software Engineer, Other Special Skilled Jobs</td>
+                                        </tr>
+                                        <!--Preferred District:-->
+                                        <tr>
+                                            <td style="padding-left:5px;" width="32%" align="left">Preferred District </td>
+                                            <td width="2%" align="center">:</td>
+                                            <td width="66%" align="left">Bogura, Chattogram, Cox's Bazar, Dhaka, Kushtia, Rajshahi, Sylhet</td>
+                                        </tr>
+                                        <!--Preferred Country:-->
+                                        <tr>
+                                            <td style="padding-left:5px;" width="32%" align="left">Preferred Country </td>
+                                            <td width="2%" align="center">:</td>
+                                            <td width="66%" align="left">Australia, Singapore</td>
+                                        </tr>
+                                        <!--Preferred Organization Types:-->
+                                        <tr>
+                                            <td style="padding-left:5px;" width="32%" valign="top" align="left">Preferred Organization
+                                                Types</td>
+                                            <td width="2%" valign="top" align="center">:</td>
+                                            <td width="66%" align="left">
+                                                Software Company, IT Enabled Service, BPO/ Data Entry Firm, Multinational Companies,
+                                                Hotel, Overseas Companies, Group of Companies, Mobile Accessories, Interior Design,
+                                                Online Newspaper/ News Portal, Web Media/Blog, Technical Infrastructure
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <!------------Specialization:-------->
+                <table style="margin-top:3px;" width="750" cellspacing="0" cellpadding="0" border="0" align="center">
+                    <tbody>
+                        <tr>
+                            <td colspan="6" style="background:#E6E6E6;font-size:12px;font-weight:bold;padding-left:2px;padding-top:2px;padding-bottom:2px;width:750px;"><u>Specialization:</u></td>
+                        </tr>
+                        <tr>
+                            <td colspan="6" style="padding-left:5px;padding-top:7px;padding-bottom:10px;" class="BDJNormalText01" align="left">
+                                <table style="border:1px solid #666666;word-break: break-word;" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+                                    <tbody>
+                                        <tr>
+                                            <td style="border-right:1px solid #666666;border-bottom:1px solid #666666;" width="40%" align="center">
+                                                <strong>Fields of Specialization</strong>
+                                            </td>
+                                            <td style="border-bottom:1px solid #666666;" width="60%" align="center">
+                                                <strong>Description</strong>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="border-right:1px solid #666666;" width="40%" align="left">
+                                                <ul style="padding-left:25px;">
+                                                    <li> JavaScript</li>
+                                                    <li> jQuery</li>
+                                                    <li> Bootstrap</li>
+                                                    <li> React JS</li>
+                                                    <li> Next JS</li>
+                                                    <li> Vue JS</li>
+                                                    <li> Angular JS</li>
+                                                    <li> .net</li>
+                                                </ul>
+                                            </td>
+                                            <td width="60%" style="padding:0 10px;" align="left">
+                                                I am a Software Engineer, I am an active person, responsible, creative,
+                                                flexible, achievement oriented and in constant evolution because of my assigned jobs. My
+                                                main goal is the client satisfaction. I have hands on experience efficiently using
+                                                JavaScript, jQuery, Bootstrap, React JS, Next JS, Vue JS, Angular JS, .net etc. and with upgraded languages</li>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                
+                    </tbody>
+                </table>
+                
+                <!----------EXTRA CURRICULAR ACTIVITIES, LANGUAGE PROFICIENCY:--------->
+                <table style="margin-top:3px;" width="750" cellspacing="0" cellpadding="0" border="0" align="center">
+                    <tbody>
+                        <tr>
+                            <td colspan="6" style="background:#E6E6E6;font-size:12px;font-weight:bold;padding-left:2px;padding-top:2px;padding-bottom:2px;width:750px;"><u>Extra Curricular Activities:</u></td>
+                        </tr>
+                        <tr>
+                            <td colspan="6" style="padding-left:5px;padding-top:7px;padding-bottom:10px;word-break:break-word;" class="BDJNormalText01" align="left">
+                                Design, Photography, Basketball, Cricket, Football, Pool, Reading, Writing.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <!-----------Language Proficiency:---------->
+                <table style="margin-top:3px;" width="750" cellspacing="0" cellpadding="0" border="0" align="center">
+                    <tbody>
+                        <tr>
+                            <td colspan="6" style="background:#E6E6E6;font-size:12px;font-weight:bold;padding-left:2px;padding-top:2px;padding-bottom:2px;width:750px;"><u>Language Proficiency:</u></td>
+                        </tr>
+                        <tr>
+                            <td colspan="6" style="padding-left:5px;padding-top:7px;padding-bottom:10px;" align="left">
+                                <table style="border:1px solid #666666" width="750" cellspacing="0" cellpadding="0" border="0" align="center">
+                                    <tbody>
+                                        <tr>
+                                            <td style="border-right:1px solid #666666" width="25%" align="center"><strong>Language</strong></td>
+                                            <td style="border-right:1px solid #666666" width="25%" align="center"><strong>Reading</strong></td>
+                                            <td style="border-right:1px solid #666666" width="25%" align="center"><strong>Writing</strong></td>
+                                            <td width="25%" align="center"><strong>Speaking</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="border-right:1px solid #666666;border-top:1px solid #666666;" width="25%" align="center">Bangla</td>
+                                            <td style="border-right:1px solid #666666;border-top:1px solid #666666;" width="25%" align="center">High</td>
+                                            <td style="border-right:1px solid #666666;border-top:1px solid #666666;" width="25%" align="center">High</td>
+                                            <td style="border-top:1px solid #666666;" width="25%" align="center">High</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="border-right:1px solid #666666;border-top:1px solid #666666;" width="25%" align="center">English</td>
+                                            <td style="border-right:1px solid #666666;border-top:1px solid #666666;" width="25%" align="center">High</td>
+                                            <td style="border-right:1px solid #666666;border-top:1px solid #666666;" width="25%" align="center">High</td>
+                                            <td style="border-top:1px solid #666666;" width="25%" align="center">High</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <!-----------PERSONAL DETAILS:----------->
+                <table style="margin-top:3px;" width="750" cellspacing="0" cellpadding="0" border="0" align="center">
+                    <!-------------Personal Details--------->
+                    <tbody>
+                        <tr>
+                            <td colspan="6" style="background:#E6E6E6;font-size:12px;font-weight:bold;padding-left:2px;padding-top:2px;padding-bottom:2px;width:750px;"><u>Personal Details :</u></td>
+                        </tr>
+                        <tr>
+                            <td colspan="6" style="padding-left:5px;padding-top:7px;padding-bottom:10px;" align="left">
+                                <table style="word-break:break-word;" width="100%" cellspacing="0" cellpadding="0" border="0"
+                                    align="center">
+                                    <!--Fathers Name:-->
+                                    <tbody>
+                                        <tr>
+                                            <td style="padding-left:5px;" width="22%" align="left">Father's Name</td>
+                                            <td width="2%" align="center">:</td>
+                                            <td width="76%" align="left">Neil Brighten</td>
+                                        </tr>
+                                        <!--Mothers Name:-->
+                                        <tr>
+                                            <td style="padding-left:5px;" width="22%" align="left">Mother's Name</td>
+                                            <td width="2%" align="center">:</td>
+                                            <td width="76%" align="left">Sara Sneither</td>
+                                        </tr>
+                                        <!--Date of Birth:-->
+                                        <tr>
+                                            <td style="padding-left:5px;" width="22%" align="left">Date of Birth</td>
+                                            <td width="2%" align="center">:</td>
+                                            <td width="76%" align="left">December 30, 1990</td>
+                                        </tr>
+                                        <!--Gender:-->
+                                        <tr>
+                                            <td style="padding-left:5px;" width="22%" align="left">Gender</td>
+                                            <td width="2%" align="center">:</td>
+                                            <td width="76%" align="left">Male</td>
+                                        </tr>
+                                        <!--Height:-->
+                                        <tr>
+                                            <td style="padding-left:5px;" width="22%" align="left">Height (Meter)</td>
+                                            <td width="2%" align="center">:</td>
+                                            <td width="76%" align="left"></td>
+                                        </tr>
+                                        <!--Weight:-->
+                                        <tr>
+                                            <td style="padding-left:5px;" width="22%" align="left">Weight (Kg)</td>
+                                            <td width="2%" align="center">:</td>
+                                            <td width="76%" align="left"></td>
+                                        </tr>
+                                        <!--Marital Status:-->
+                                        <tr>
+                                            <td style="padding-left:5px;" width="22%" align="left">Marital Status </td>
+                                            <td width="2%" align="center">:</td>
+                                            <td width="76%" align="left">Married</td>
+                                        </tr>
+                                        <!--Nationality:-->
+                                        <tr>
+                                            <td style="padding-left:5px;" align="left">Nationality</td>
+                                            <td align="center">:</td>
+                                            <td align="left">Bangladeshi</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding-left:5px;" align="left">National Id No.</td>
+                                            <td align="center">:</td>
+                                            <td align="left">54365463454432</td>
+                                        </tr>
+                                        <!--Religion:-->
+                                        <tr>
+                                            <td style="padding-left:5px;" align="left">Religion</td>
+                                            <td align="center">:</td>
+                                            <td align="left">Islam</td>
+                                        </tr>
+                                        <!-- Passport No -->
+                                        <!-- Passport Issue Date -->
+                                        <!--Permanent Address:-->
+                                        <tr>
+                                            <td style="padding-left:5px;" align="left">Permanent Address</td>
+                                            <td align="center">:</td>
+                                            <td align="left">This is an example address, Shantinagr TSO, Ramna, Dhaka 1217</td>
+                                        </tr>
+                                        <!--Current Location:-->
+                                        <tr>
+                                            <td style="padding-left:5px;" align="left">Current Location</td>
+                                            <td align="center">:</td>
+                                            <td align="left">Dhaka</td>
+                                        </tr>
+                                        <!--Disability ID:-->
+                                        <tr>
+                                            <td style="padding-left:5px;" align="left">Disability ID</td>
+                                            <td align="center">:</td>
+                                            <td align="left"></td>
+                                        </tr>
+                                        <!-- END Disability ID -->
+                                        <tr>
+                                            <td scope="row" colspan="6"></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3" style="padding-left:5px; font-size:12px;" align="left">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <!-----------REFERENCE:------------>
+                <table style="margin-top:3px;" width="750" cellspacing="0" cellpadding="0" border="0" align="center">
+                    <!-------------Reference:------------>
+                    <tbody>
+                        <tr>
+                            <td colspan="6" style="background:#E6E6E6;font-size:12px;font-weight:bold;padding-left:2px;padding-top:2px;padding-bottom:2px;width:750px;"><u>Reference (s):</u></td>
+                        </tr>
+                        <tr>
+                            <td colspan="6" style="padding-left:5px;padding-top:7px;padding-bottom:10px;" align="left">
+                                <table style="word-break: break-word;" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+                                    <tbody>
+                                        <tr class="BDJNormalText03">
+                                            <td width="22%" align="left"></td>
+                                            <td width="2%" align="center"></td>
+                                            <td class="BDJBoldText01" style="border-right:1px solid #666666;" width="35%" align="left"><u>Reference: 01</u></td>
+                                            <td class="BDJBoldText01" style="padding-left:15px;" width="41%" align="left"><u>Reference: 02</u></td>
+                                        </tr>
+                                        <!--Name:-->
+                                        <tr class="BDJNormalText03">
+                                            <td style="padding-left:5px;" width="22%" align="left">Name </td>
+                                            <td width="2%" align="center">:</td>
+                                            <td style="border-right:1px solid #666666;" width="35%" align="left">Rechard Reo </td>
+                                            <td style="padding-left: 10px;" width="41%" align="left">Masual Grain</td>
+                                        </tr>
+                                        <!--Organization:-->
+                                        <tr class="BDJNormalText03">
+                                            <td style="padding-left:5px;" width="22%" align="left">Organization</td>
+                                            <td width="2%" align="center">:</td>
+                                            <td style="border-right:1px solid #666666;" width="35%" align="left">Rajshahi Polytechnic Institute </td>
+                                            <td style="padding-left: 10px;" width="41%" align="left">Dhaka International University</td>
+                                        </tr>
+                                        <!--Designation:-->
+                                        <tr class="BDJNormalText03">
+                                            <td style="padding-left:5px;" width="22%" align="left">Designation</td>
+                                            <td width="2%" align="center">:</td>
+                                            <td style="border-right:1px solid #666666;" width="35%" align="left">Junior Instructor</td>
+                                            <td style="padding-left: 10px;" width="41%" align="left">Chief Instructor</td>
+                                        </tr>
+                                        <!--Address:-->
+                                        <tr class="BDJNormalText03">
+                                            <td style="padding-left:5px;" width="22%" align="left">Address</td>
+                                            <td width="2%" align="center">:</td>
+                                            <td style="border-right:1px solid #666666;" width="35%" align="left">Rajshahi</td>
+                                            <td style="padding-left: 10px;" width="41%" align="left">Dhaka</td>
+                                        </tr>
+                                        <!--Phone(Off):-->
+                                        <tr class="BDJNormalText03">
+                                            <td style="padding-left:5px;" width="22%" align="left">Phone (Off.) </td>
+                                            <td width="2%" align="center">:</td>
+                                            <td style="border-right:1px solid #666666;" width="35%" align="left"></td>
+                                            <td style="padding-left: 10px;" width="41%" align="left"></td>
+                                        </tr>
+                                        <!--Phone(Res):-->
+                                        <tr class="BDJNormalText03">
+                                            <td style="padding-left:5px;" align="left">Phone (Res.) </td>
+                                            <td align="center">:</td>
+                                            <td style="border-right:1px solid #666666;" align="left"></td>
+                                            <td style="padding-left: 10px;" align="left"></td>
+                                        </tr>
+                                        <!--Mobile:-->
+                                        <tr class="BDJNormalText03">
+                                            <td style="padding-left:5px;" align="left">Mobile</td>
+                                            <td align="center">:</td>
+                                            <td style="border-right:1px solid #666666;" align="left">017100-1234576 </td>
+                                            <td style="padding-left: 10px;" align="left">017100-1234576</td>
+                                        </tr>
+                                        <!--E-Mail:-->
+                                        <tr class="BDJNormalText03">
+                                            <td style="padding-left:5px;" align="left">E-Mail</td>
+                                            <td align="center">:</td>
+                                            <td style="border-right:1px solid #666666;" align="left">example@gmail.com </td>
+                                            <td style="padding-left: 10px;" align="left">example@gmail.com</td>
+                                        </tr>
+                                        <!--Relation:-->
+                                        <tr class="BDJNormalText03">
+                                            <td style="padding-left:5px;" align="left">Relation</td>
+                                            <td align="center">:</td>
+                                            <td style="border-right:1px solid #666666;" align="left">Academic</td>
+                                            <td style="padding-left: 10px;" align="left">Academic</td>
+                                        </tr>
+                                        <tr class="BDJNormalText03">
+                                            <td align="left"></td>
+                                            <td align="center"></td>
+                                            <td colspan="2" align="left"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<footer class="bg-gray-100 relative">
+    <div class="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-white"></div>
+    <div class="max-w-screen-xl py-2 mx-auto lg:py-20 md:p-8 lg:p-10">
+    </div>
+</footer>
+
+<!-- Upload Modal -->
+<div id="defaultModal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative w-full max-w-[520px] max-h-full">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow">
+            <!-- Modal header -->
+            <div class="flex items-start justify-between py-2 px-4 border-b rounded-t">
+                <h3 class="text-[20px] font-bold text-[#222]">
+                    Upload Resume
+                </h3>
+                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center" data-modal-hide="defaultModal">
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+            <!-- Modal body -->
+            <div class="p-6 space-y-3">
+                <div class="flex items-center justify-center w-full">
+                    <label for="dropzone-file" class="flex flex-col items-center justify-center w-full h-64 border-2 border-dashed border-[#00ACF5]/60 rounded-lg bg-[#00ACF5]/10 hover:opacity-75 cursor-pointer">
+                        <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                            <img src="../images/icons/upload.svg" alt="icon">
+                            <p class="mt-3 mb-2 text-[16px] text-[#222] font-semibold">Drag & Drop Files or <span class="text-[#22A801] underline">Browse</span></p>
+                            <p class="text-[12px] text-[#777] font-semibold">Supported formats : Word & PDF</p>
+                        </div>
+                        <input id="dropzone-file" type="file" class="hidden" />
+                    </label>
+                </div> 
+                <button type="button" class="w-full text-white bg-[#F25F0D] hover:bg-[#db560b] focus:ring-2 focus:outline-none focus:ring-blue-300 font-semibold rounded-lg text-md px-5 py-2.5 text-center">Upload Resume</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Change Password Modal -->
+<div id="changepassModal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative w-full max-w-[520px] max-h-full">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow">
+            <!-- Modal header -->
+            <div class="flex items-start justify-between py-2 px-4 border-b rounded-t">
+                <h3 class="text-[20px] font-bold text-[#222]">
+                    Change Password
+                </h3>
+                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center" data-modal-hide="changepassModal">
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+            <!-- Modal body -->
+            <div class="p-6 space-y-3">
+                <div class="flex flex-col items-center justify-center pb-3 gap-3">
+                    <img src="../images/icons/key.svg" alt="icon">
+                    <div class="w-full">
+                        <label for="current_pass" class="block mb-1 text-md font-semibold text-gray-600">Current Password<span class="text-[#FF0000]">*</span></label>
+                        <input type="password" id="current_pass" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 focus" placeholder="Current Password" required="">
+                    </div>
+                    <div class="w-full">
+                        <label for="new_pass" class="block mb-1 text-md font-semibold text-gray-600">New Password<span class="text-[#FF0000]">*</span></label>
+                        <input type="password" id="new_pass" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 focus" placeholder="New Password" required="">
+                    </div>
+                    <div class="w-full">
+                        <label for="retype_pass" class="block mb-1 text-md font-semibold text-gray-600">Retype Password<span class="text-[#FF0000]">*</span></label>
+                        <input type="password" id="retype_pass" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 focus" placeholder="Retype Password" required="">
+                    </div>
+                </div>
+                <div class="flex gap-3 justify-center">
+                    <button type="button" data-modal-hide="changepassModal" class="text-white bg-gray-400 hover:bg-gray-500 focus:ring-2 focus:outline-none focus:ring-blue-300 font-semibold rounded-lg text-md px-5 py-2.5 text-center">Cancel</button>
+                    <button type="button" data-modal-hide="changepassModal" data-modal-target="successModal" data-modal-toggle="successModal" class="text-white bg-[#F25F0D] hover:bg-[#db560b] focus:ring-2 focus:outline-none focus:ring-blue-300 font-semibold rounded-lg text-md px-5 py-2.5 text-center">Save Changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Success Modal -->
+<div id="successModal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(70%-1rem)] max-h-full">
+    <div class="relative w-full max-w-[520px] max-h-full">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow">
+            <div class="py-6 px-4 space-y-3">
+                <div class="flex flex-col items-center justify-center pb-2">
+                    <img src="../images/icons/check-circle.svg" alt="icon">
+                    <p class="text-[27px] text-gray-600 font-semibold">Success!</p>
+                    <p class="text-[15px] text-gray-500 font-semibold text-center">Your operation has been done successfully!</p>
+                </div>
+                <div class="flex gap-3 justify-center">
+                    <button type="button" data-modal-hide="successModal" class="text-white bg-[#F25F0D] hover:bg-[#db560b] focus:ring-2 focus:outline-none focus:ring-blue-300 font-semibold rounded-lg text-md px-5 py-2.5 text-center">Done</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="../js/flowbite.min.js"></script>
+</body>
+</html>

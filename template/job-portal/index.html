@@ -1,0 +1,880 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Portal</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <!-- Styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="./styles.css" rel="stylesheet">
+</head>
+
+
+<body>
+    <header class="fixed w-full shadow backdrop-blur-lg z-20">
+        <nav class="border-gray-200 py-2.5">
+            <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
+                <a href="index.html" class="flex items-center">
+                    <img src="./images/logo.png" class="h-15 mr-3 h-10" alt="nextitlogo"/>
+                </a>
+                <div class="flex items-center lg:order-2">
+                    <a href="signin.html" class="pt-2 pb-2 pl-5 pr-5 text-white bg-[#39B54A] hover:bg-[#2ea23e] rounded-full text-sm uppercase font-bold focus:outline-none">Sign In</a>
+
+                    <button data-collapse-toggle="mobile-menu-2" type="button" class="pl-2 pr-2 inline-flex items-center ml-1 text-sm text-gray-500 rounded-sm lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="mobile-menu-2" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fa fa-bars text-lg"></i>
+                    </button>
+                </div>
+                <div class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
+                    <ul class="flex flex-col font-medium lg:flex-row lg:space-x-8 lg:mt-0 lg:space-y-0 lg:my-0 space-y-6 my-8">
+                        <li>
+                            <a href="index.html" class="pl-2 pr-2 block text-[#39B54A] hover:text-[#39B54A] border-b border-[#39B54A] hover:border-b hover:border-[#39B54A]" aria-current="page">Home</a>
+                        </li>
+                        <li>
+                            <a href="jobs.html" class="pl-2 pr-2 block text-[#000] hover:text-[#39B54A] border-b border-transparent hover:border-b hover:border-[#39B54A]">Jobs</a>
+                        </li>
+                        <li>
+                            <a href="how.html" class="pl-2 pr-2 block text-[#000] hover:text-[#39B54A] border-b border-transparent hover:border-b hover:border-[#39B54A]">How to Apply</a>
+                        </li>
+                        <li>
+                            <a href="FAQ.html" class="pl-2 pr-2 block text-[#000] hover:text-[#39B54A] border-b border-transparent hover:border-b hover:border-[#39B54A]">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="https://nextitltd.com/" target="_blank" class="pl-2 pr-2 block text-[#000] hover:text-[#39B54A] border-b border-transparent hover:border-b hover:border-[#39B54A]">Return to Main website</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Start block -->
+    <section class="relative bg-white bg-gradient-to-br from-[#3AB54B]/[0.15] via-[#ED6922]/[0.15] to-[#3399FF]/[0.15] py-24 lg:pt-36 pb-24">
+        <div class="grid max-w-screen-xl px-4 mx-auto lg:gap-8 xl:gap-0 lg:grid-cols-12">
+            <div class="p-8 lg:mr-auto mr-[0] place-self-center lg:col-span-7 lg:text-left lg:block table col-span-12 justify-center text-center bg-[#39B54A]/10 rounded-tl-[30px] rounded-tr-[90px] rounded-bl-[90px] rounded-br-[10px]">
+                <h1 class="max-w-2xl mb-4 text-xl md:text-3xl font-bold leading-none tracking-tight xl:text-5xl text-gray-600">Find the perfect job for you</h1>
+                <p class="max-w-xl mb-6 font-light text-lg md:text-2xl text-[#39B54A] lg:mb-8">
+                    Search your career opportunity through Next jobs
+                </p>
+                <form>   
+                    <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
+                    <div class="relative">
+                        <input type="search" id="default-search" class="block w-full h-[80px] py-[13px] px-[40px] text-lg text-gray-900 rounded-full bg-gray-50 focus:border-transparent focus:outline-none shadow-md" placeholder="Search Jobs" required>
+                        <button type="submit" class="w-[65px] h-[65px] text-white absolute right-2 bottom-2 bg-[#3399FE] hover:bg-[#3399FE]/90 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2">
+                            <i class="fa fa-search text-2xl"></i>
+                        </button>
+                    </div>
+                </form>
+                <h3 class="text[14px] text-[#666] font-semibold uppercase mt-5 mb-2">POPULAR CATEGORIES</h3>
+                <ul class="flex flex-wrap items-center mb-6 text-[#1e85ff]">
+                    <li>
+                        <a class="block m-1 py-1 px-4 text-sm font-semibold bg-[#3399FE]/10 rounded-full hover:text-white hover:bg-[#3399fe]" href="#">Manufacturing</a>
+                    </li>
+                    <li>
+                        <a class="block m-1 py-1 px-4 text-sm font-semibold bg-[#3399FE]/10 rounded-full hover:text-white hover:bg-[#3399fe]" href="#">Civil Jobs</a>
+                    </li>
+                    <li>
+                        <a class="block m-1 py-1 px-4 text-sm font-semibold bg-[#3399FE]/10 rounded-full hover:text-white hover:bg-[#3399fe]" href="#">Administration</a>
+                    </li>
+                    <li>
+                        <a class="block m-1 py-1 px-4 text-sm font-semibold bg-[#3399FE]/10 rounded-full hover:text-white hover:bg-[#3399fe]" href="#">Finance</a>
+                    </li>
+                    <li>
+                        <a class="block m-1 py-1 px-4 text-sm font-semibold bg-[#3399FE]/10 rounded-full hover:text-white hover:bg-[#3399fe]" href="#">Retail</a>
+                    </li>
+                    <li>
+                        <a class="block m-1 py-1 px-4 text-sm font-semibold bg-[#3399FE]/10 rounded-full hover:text-white hover:bg-[#3399fe]" href="#">IT & Communications</a>
+                    </li>
+                    <li>
+                        <a class="block m-1 py-1 px-4 text-sm font-semibold bg-[#3399FE]/10 rounded-full hover:text-white hover:bg-[#3399fe]" href="#">Engineering</a>
+                    </li>
+                    <li>
+                        <a class="block m-1 py-1 px-4 text-sm font-semibold bg-[#3399FE]/10 rounded-full hover:text-white hover:bg-[#3399fe]" href="#">Sales</a>
+                    </li>
+                    <li>
+                        <a class="block m-1 py-1 px-4 text-sm font-semibold bg-[#3399FE]/10 rounded-full hover:text-white hover:bg-[#3399fe]" href="#">Marketing</a>
+                    </li>
+                    <li>
+                        <a class="block m-1 py-1 px-4 text-sm font-semibold bg-[#3399FE]/10 rounded-full hover:text-white hover:bg-[#3399fe]" href="#">Manufacturing</a>
+                    </li>
+                    <li>
+                        <a class="block m-1 py-1 px-4 text-sm font-semibold bg-[#3399FE]/10 rounded-full hover:text-white hover:bg-[#3399fe]" href="#">Designing</a>
+                    </li>
+                    <li>
+                        <a class="block m-1 py-1 px-4 text-sm font-semibold bg-[#3399FE]/10 rounded-full hover:text-white hover:bg-[#3399fe]" href="#">Software Engineer</a>
+                    </li>
+                    <li>
+                        <a class="block m-1 py-1 px-4 text-sm font-semibold bg-[#3399FE]/10 rounded-full hover:text-white hover:bg-[#3399fe]" href="#">Project Manager</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="ms-0 lg:ms-4 lg:mt-0 lg:col-span-5 lg:flex mt-12 col-span-12 table mx-auto">
+                <img src="./images/hero.png" alt="hero image">
+            </div>                
+        </div>
+        <div class="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-white"></div>
+    </section>
+    <!-- End block -->
+    <!-- Start block -->
+    <section class="bg-white">
+        <div class="max-w-screen-xl px-4 py-20 mx-auto space-y-12 lg:space-y-20 lg:py-24 lg:px-6">
+            <!-- Row -->
+            <div class="items-center gap-12 lg:grid lg:grid-cols-2 xl:gap-16">
+                <img class="mb-10 mx-auto justify-center rounded-lg lg:mb-0 lg:flex" src="./images/feature-2.png" alt="feature image 2">
+                <div class="sm:text-lg">
+                    <p class="table px-2 mb-3 text-[15px] font-bold text-[#39B54A] bg-[#39B54A]/10 rounded-md">About Us</p>
+                    <h2 class="mb-4 text-3xl font-bold tracking-tight text-gray-600">About Next IT Career</h2>
+                    <p class="mb-8 font-normal text-sm text-gray-500">Deliver great service experiences fast - without the complexity of traditional ITSM solutions. Accelerate critical development work, eliminate toil, and deploy changes with ease. Deliver great service experiences fast - without the complexity of traditional ITSM solutions. Accelerate critical development work, eliminate toil, and deploy changes with ease.</p>
+                    <!-- List -->
+                    <ul role="list" class="pt-8 space-y-2 border-t border-gray-200 my-7">
+                        <li class="flex space-x-2 place-items-center">
+                            <!-- Icon -->
+                            <i class="fa fa-check bg-[#39B54A] w-[20px] h-[20px] text-xs text-center text-white leading-[20px] place-items-center rounded-full"></i>
+                            <span class=" font-normal text-[16px] text-[#343434]">Dynamic reports and dashboards</span>
+                        </li>
+                        <li class="flex space-x-2 place-items-center">
+                            <!-- Icon -->
+                            <i class="fa fa-check bg-[#39B54A] w-[20px] h-[20px] text-xs text-center text-white leading-[20px] place-items-center rounded-full"></i>
+                            <span class=" font-normal text-[16px] text-[#343434]">Templates for everyone</span>
+                        </li>
+                        <li class="flex space-x-2 place-items-center">
+                            <!-- Icon -->
+                            <i class="fa fa-check bg-[#39B54A] w-[20px] h-[20px] text-xs text-center text-white leading-[20px] place-items-center rounded-full"></i>
+                            <span class=" font-normal text-[16px] text-[#343434]">Development workflow</span>
+                        </li>
+                        <li class="flex space-x-2 place-items-center">
+                            <!-- Icon -->
+                            <i class="fa fa-check bg-[#39B54A] w-[20px] h-[20px] text-xs text-center text-white leading-[20px] place-items-center rounded-full"></i>
+                            <span class=" font-normal text-[16px] text-[#343434]">Limitless business automation</span>
+                        </li>
+                        <li class="flex space-x-2 place-items-center">
+                            <!-- Icon -->
+                            <i class="fa fa-check bg-[#39B54A] w-[20px] h-[20px] text-xs text-center text-white leading-[20px] place-items-center rounded-full"></i>
+                            <span class=" font-normal text-[16px] text-[#343434]">Knowledge management</span>
+                        </li>
+                    </ul>
+                    <p class="mb-8 font-normal text-sm text-gray-500">Deliver great service experiences fast - without the complex of tradition ITSM solutions. Deliver great service experiences the complexity of traditional solutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End block -->
+    <!-- Start block -->
+    <section class="bg-[#fdfffc]">
+        <div class="items-center max-w-screen-xl px-4 py-20 mx-auto lg:grid lg:grid-cols-6 gap-10 lg:py-24">
+            <div class="col-span-2 mb-24 lg:mb-8">
+                <p class="table px-2 mb-3 text-[15px] font-bold text-[#39B54A] bg-[#39B54A]/10 rounded-md">Facilities & Benefits</p>
+                <h2 class="mt-3 mb-4 text-3xl font-bold tracking-tight text-gray-600">To make us more growing, Here are our best Facilities & Benefits</h2>
+                <p class="mb-8 font-normal text-sm text-gray-500">Our rigorous security and compliance standards are at the heart of all we do. We work tirelessly to protect you and your customers. Our rigorous security and compliance standards are at the heart of all we do. We work tirelessly to protect you and your customers.</p>
+                <div class="pt-6 mt-6 space-y-4 border-t border-[#e5e5e5]">
+                    <div class="flex place-items-center">
+                      <a href="jobs.html" class="text-base font-semibold text-[#3298FF] hover:text-[#000]">
+                        Explore All Jobs
+                        <i class="fa fa-arrow-right ml-2"></i>
+                      </a>
+                    </div>
+                    <div class="flex place-items-center">
+                      <a target="blank" href="https://nextitltd.com/contact.php" class="text-base font-semibold text-[#3298FF] hover:text-[#000]">
+                          Contact Us
+                          <i class="fa fa-arrow-right ml-2"></i>
+                      </a>
+                      </div>
+                </div>
+            </div>
+            <div class="col-span-4 lg:grid lg:grid-cols-3 lg:gap-6 lg:gap-y-12 md:grid md:gap-6 md:gap-y-12 md:grid-cols-2 grid gap-y-12">
+                <div class="bg-white relative shadow-[0px_0px_25px_rgba(40,140,54,0.18)] rounded-[10px] px-[18px] py-[20px]">
+                    <div class="flex w-[90px] h-[90px] leading-[90px] items-center justify-center bg-white rounded-[10px] absolute top-[-20px] shadow-[0px_0px_15px_rgba(56,152,226,0.3)]">
+                        <img class="h-[50px]" src="./images/benefits/1.png" alt="icon"/>
+                    </div>
+                    <h3 class="mt-[60px] mb-2 text-[17px] font-bold text-gray-600">Yearly Salary Review</h3>
+                    <p class="font-base text-sm text-gray-500">For Landwind, with zero maintenance downtime</p>
+                </div>
+                <div class="bg-white relative shadow-[0px_0px_25px_rgba(40,140,54,0.18)] rounded-[10px] px-[18px] py-[20px]">
+                    <div class="flex w-[90px] h-[90px] leading-[90px] items-center justify-center bg-white rounded-[10px] absolute top-[-20px] shadow-[0px_0px_15px_rgba(56,152,226,0.3)]">
+                        <img src="./images/benefits/2.png" alt="icon"/>
+                    </div>
+                    <h3 class="mt-[60px] mb-2 text-[17px] font-bold text-gray-600">Performance Bonus</h3>
+                    <p class="font-base text-sm text-gray-500">Trusted by over 600 milion users around the world</p>
+                </div>
+                <div class="bg-white relative shadow-[0px_0px_25px_rgba(40,140,54,0.18)] rounded-[10px] px-[18px] py-[20px]">
+                    <div class="flex w-[90px] h-[90px] leading-[90px] items-center justify-center bg-white rounded-[10px] absolute top-[-20px] shadow-[0px_0px_15px_rgba(56,152,226,0.3)]">
+                        <img src="./images/benefits/3.png" alt="icon"/>
+                    </div>
+                    <h3 class="mt-[60px] mb-2 text-[17px] font-bold text-gray-600">Festival Bonus</h3>
+                    <p class="font-base text-sm text-gray-500">Trusted by over 600 milion users around the world</p>
+                </div>
+                <div class="bg-white relative shadow-[0px_0px_25px_rgba(40,140,54,0.18)] rounded-[10px] px-[18px] py-[20px]">
+                    <div class="flex w-[90px] h-[90px] leading-[90px] items-center justify-center bg-white rounded-[10px] absolute top-[-20px] shadow-[0px_0px_15px_rgba(56,152,226,0.3)]">
+                        <img src="./images/benefits/4.png" alt="icon"/>
+                    </div>
+                    <h3 class="mt-[60px] mb-2 text-[17px] font-bold text-gray-600">Weekly 2 holidays</h3>
+                    <p class="font-base text-sm text-gray-500">Have used Landwind to create functional websites</p>
+                </div>
+                <div class="bg-white relative shadow-[0px_0px_25px_rgba(40,140,54,0.18)] rounded-[10px] px-[18px] py-[20px]">
+                    <div class="flex w-[90px] h-[90px] leading-[90px] items-center justify-center bg-white rounded-[10px] absolute top-[-20px] shadow-[0px_0px_15px_rgba(56,152,226,0.3)]">
+                        <img src="./images/benefits/5.png" alt="icon"/>
+                    </div>
+                    <h3 class="mt-[60px] mb-2 text-[17px] font-bold text-gray-600">Lunch & Snacks</h3>
+                    <p class="font-base text-sm text-gray-500">Transactions per day</p>
+                </div>
+                <div class="bg-white relative shadow-[0px_0px_25px_rgba(40,140,54,0.18)] rounded-[10px] px-[18px] py-[20px]">
+                    <div class="flex w-[90px] h-[90px] leading-[90px] items-center justify-center bg-white rounded-[10px] absolute top-[-20px] shadow-[0px_0px_15px_rgba(56,152,226,0.3)]">
+                        <img src="./images/benefits/6.png" alt="icon"/>
+                    </div>
+                    <h3 class="mt-[60px] mb-2 text-[17px] font-bold text-gray-600">Unlimited Coffee, Tea</h3>
+                    <p class="font-base text-sm text-gray-500">For Landwind, with zero maintenance downtime</p>
+                </div>
+                <div class="bg-white relative shadow-[0px_0px_25px_rgba(40,140,54,0.18)] rounded-[10px] px-[18px] py-[20px]">
+                    <div class="flex w-[90px] h-[90px] leading-[90px] items-center justify-center bg-white rounded-[10px] absolute top-[-20px] shadow-[0px_0px_15px_rgba(56,152,226,0.3)]">
+                        <img src="./images/benefits/7.png" alt="icon"/>
+                    </div>
+                    <h3 class="mt-[60px] mb-2 text-[17px] font-bold text-gray-600">Govt. Declared Holiday</h3>
+                    <p class="font-base text-sm text-gray-500">Trusted by over 600 milion users around the world</p>
+                </div>
+                <div class="bg-white relative shadow-[0px_0px_25px_rgba(40,140,54,0.18)] rounded-[10px] px-[18px] py-[20px]">
+                    <div class="flex w-[90px] h-[90px] leading-[90px] items-center justify-center bg-white rounded-[10px] absolute top-[-20px] shadow-[0px_0px_15px_rgba(56,152,226,0.3)]">
+                        <img src="./images/benefits/8.png" alt="icon"/>
+                    </div>
+                    <h3 class="mt-[60px] mb-2 text-[17px] font-bold text-gray-600">Friendly Environment</h3>
+                    <p class="font-base text-sm text-gray-500">Have used Landwind to create functional websites</p>
+                </div>
+                <div class="bg-white relative shadow-[0px_0px_25px_rgba(40,140,54,0.18)] rounded-[10px] px-[18px] py-[20px]">
+                    <div class="flex w-[90px] h-[90px] leading-[90px] items-center justify-center bg-white rounded-[10px] absolute top-[-20px] shadow-[0px_0px_15px_rgba(56,152,226,0.3)]">
+                        <img src="./images/benefits/9.png" alt="icon"/>
+                    </div>
+                    <h3 class="mt-[60px] mb-2 text-[17px] font-bold text-gray-600">Achieve Opportunity</h3>
+                    <p class="font-base text-sm text-gray-500">Transactions per day</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End block -->
+
+    <section class="relative bg-gradient-to-br from-[#3AB54B]/[0.15] via-[#ED6922]/[0.15] to-[#3399FF]/[0.15] py-20 pb-24">
+        <div class="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-[#FDFFFC]"></div>
+        <div class="max-w-screen-xl mx-auto border-gray-300 text-center">
+            <p class="table mx-auto px-2 mb-3 text-[15px] font-bold text-[#39B54A] bg-[#39B54A]/10 rounded-md">Wings</p>
+            <a href="customers.html" class="text-3xl font-bold tracking-tight text-gray-600">Wings wise jobs</a>
+            <div class="mt-8 flex flex-wrap justify-center gap-6 brightness-75 contrast-200 lg:gap-6">
+                <a href="jobs.html" class="block opacity-75 hover:opacity-100"> 
+                    <span class="block text-center py-3 px-6 bg-white/60 rounded-tl-[10px] rounded-tr-[30px] rounded-bl-[30px] rounded-br-[5px] border-[1px] border-white shadow-xl hover:border-gray-200 hover:shadow-none hover:bg-white">
+                        <img class="h-8 w-auto mx-auto lg:h-10 lg:w-auto" src="images/clients/airbnb.svg" loading="lazy">
+                        <h6 class="my-2 bg-[#3399FE]/10 text-[12px] font-semibold uppercase px-2 py-1 rounded-md text-[#3399FF]"><i class="fas fa-briefcase me-1"></i> 6 Open Jobs</h6>
+                    </span>
+                    <h4 class="mt-2 mb-5 text-[15px] font-semibold text-[#39B54A]">airbnb</h4>
+                </a>
+                <a href="jobs.html" class="block opacity-75 hover:opacity-100"> 
+                    <span class="block text-center py-3 px-6 bg-white/60 rounded-tl-[10px] rounded-tr-[30px] rounded-bl-[30px] rounded-br-[5px] border-[1px] border-white shadow-xl hover:border-gray-200 hover:shadow-none hover:bg-white">
+                        <img class="h-8 w-auto mx-auto lg:h-10 lg:w-auto" src="images/clients/coty.svg" loading="lazy">
+                        <h6 class="my-2 bg-[#3399FE]/10 text-[12px] font-semibold uppercase px-2 py-1 rounded-md text-[#3399FF]"><i class="fas fa-briefcase me-1"></i> 6 Open Jobs</h6>
+                    </span>
+                    <h4 class="mt-2 mb-5 text-[15px] font-semibold text-[#39B54A]">COTY</h4>
+                </a>
+                <a href="jobs.html" class="block opacity-75 hover:opacity-100"> 
+                    <span class="block text-center py-3 px-6 bg-white/60 rounded-tl-[10px] rounded-tr-[30px] rounded-bl-[30px] rounded-br-[5px] border-[1px] border-white shadow-xl hover:border-gray-200 hover:shadow-none hover:bg-white">
+                        <img class="h-8 w-auto mx-auto lg:h-10 lg:w-auto" src="images/clients/lilly.png" loading="lazy">
+                        <h6 class="my-2 bg-[#3399FE]/10 text-[12px] font-semibold uppercase px-2 py-1 rounded-md text-[#3399FF]"><i class="fas fa-briefcase me-1"></i> 6 Open Jobs</h6>
+                    </span>
+                    <h4 class="mt-2 mb-5 text-[15px] font-semibold text-[#39B54A]">Lilly</h4>
+                </a>
+                <a href="jobs.html" class="block opacity-75 hover:opacity-100"> 
+                    <span class="block text-center py-3 px-6 bg-white/60 rounded-tl-[10px] rounded-tr-[30px] rounded-bl-[30px] rounded-br-[5px] border-[1px] border-white shadow-xl hover:border-gray-200 hover:shadow-none hover:bg-white">
+                        <img class="h-8 w-auto mx-auto lg:h-10 lg:w-auto" src="images/clients/ge.svg" loading="lazy">
+                        <h6 class="my-2 bg-[#3399FE]/10 text-[12px] font-semibold uppercase px-2 py-1 rounded-md text-[#3399FF]"><i class="fas fa-briefcase me-1"></i> 6 Open Jobs</h6>
+                    </span>
+                    <h4 class="mt-2 mb-5 text-[15px] font-semibold text-[#39B54A]">Genteleo</h4>
+                </a>
+                <a href="jobs.html" class="block opacity-75 hover:opacity-100"> 
+                    <span class="block text-center py-3 px-6 bg-white/60 rounded-tl-[10px] rounded-tr-[30px] rounded-bl-[30px] rounded-br-[5px] border-[1px] border-white shadow-xl hover:border-gray-200 hover:shadow-none hover:bg-white">
+                        <img class="h-8 w-auto mx-auto lg:h-10 lg:w-auto" src="images/clients/microsoft.svg" loading="lazy">
+                        <h6 class="my-2 bg-[#3399FE]/10 text-[12px] font-semibold uppercase px-2 py-1 rounded-md text-[#3399FF]"><i class="fas fa-briefcase me-1"></i> 6 Open Jobs</h6>
+                    </span>
+                    <h4 class="mt-2 mb-5 text-[15px] font-semibold text-[#39B54A]">Microsoft</h4>
+                </a>
+                <a href="jobs.html" class="block opacity-75 hover:opacity-100"> 
+                    <span class="block text-center py-3 px-6 bg-white/60 rounded-tl-[10px] rounded-tr-[30px] rounded-bl-[30px] rounded-br-[5px] border-[1px] border-white shadow-xl hover:border-gray-200 hover:shadow-none hover:bg-white">
+                        <img class="h-8 w-auto mx-auto lg:h-10 lg:w-auto" src="images/clients/airbnb.svg" loading="lazy">
+                        <h6 class="my-2 bg-[#3399FE]/10 text-[12px] font-semibold uppercase px-2 py-1 rounded-md text-[#3399FF]"><i class="fas fa-briefcase me-1"></i> 6 Open Jobs</h6>
+                    </span>
+                    <h4 class="mt-2 mb-5 text-[15px] font-semibold text-[#39B54A]">airbnb</h4>
+                </a>
+                <a href="jobs.html" class="block opacity-75 hover:opacity-100"> 
+                    <span class="block text-center py-3 px-6 bg-white/60 rounded-tl-[10px] rounded-tr-[30px] rounded-bl-[30px] rounded-br-[5px] border-[1px] border-white shadow-xl hover:border-gray-200 hover:shadow-none hover:bg-white">
+                        <img class="h-8 w-auto mx-auto lg:h-10 lg:w-auto" src="images/clients/coty.svg" loading="lazy">
+                        <h6 class="my-2 bg-[#3399FE]/10 text-[12px] font-semibold uppercase px-2 py-1 rounded-md text-[#3399FF]"><i class="fas fa-briefcase me-1"></i> 6 Open Jobs</h6>
+                    </span>
+                    <h4 class="mt-2 mb-5 text-[15px] font-semibold text-[#39B54A]">COTY</h4>
+                </a>
+                <a href="jobs.html" class="block opacity-75 hover:opacity-100"> 
+                    <span class="block text-center py-3 px-6 bg-white/60 rounded-tl-[10px] rounded-tr-[30px] rounded-bl-[30px] rounded-br-[5px] border-[1px] border-white shadow-xl hover:border-gray-200 hover:shadow-none hover:bg-white">
+                        <img class="h-8 w-auto mx-auto lg:h-10 lg:w-auto" src="images/clients/lilly.png" loading="lazy">
+                        <h6 class="my-2 bg-[#3399FE]/10 text-[12px] font-semibold uppercase px-2 py-1 rounded-md text-[#3399FF]"><i class="fas fa-briefcase me-1"></i> 6 Open Jobs</h6>
+                    </span>
+                    <h4 class="mt-2 mb-5 text-[15px] font-semibold text-[#39B54A]">Lilly</h4>
+                </a>
+                <a href="jobs.html" class="block opacity-75 hover:opacity-100"> 
+                    <span class="block text-center py-3 px-6 bg-white/60 rounded-tl-[10px] rounded-tr-[30px] rounded-bl-[30px] rounded-br-[5px] border-[1px] border-white shadow-xl hover:border-gray-200 hover:shadow-none hover:bg-white">
+                        <img class="h-8 w-auto mx-auto lg:h-10 lg:w-auto" src="images/clients/microsoft.svg" loading="lazy">
+                        <h6 class="my-2 bg-[#3399FE]/10 text-[12px] font-semibold uppercase px-2 py-1 rounded-md text-[#3399FF]"><i class="fas fa-briefcase me-1"></i> 6 Open Jobs</h6>
+                    </span>
+                    <h4 class="mt-2 mb-5 text-[15px] font-semibold text-[#39B54A]">Microsoft</h4>
+                </a>
+                <a href="jobs.html" class="block opacity-75 hover:opacity-100"> 
+                    <span class="block text-center py-3 px-6 bg-white/60 rounded-tl-[10px] rounded-tr-[30px] rounded-bl-[30px] rounded-br-[5px] border-[1px] border-white shadow-xl hover:border-gray-200 hover:shadow-none hover:bg-white">
+                        <img class="h-8 w-auto mx-auto lg:h-10 lg:w-auto" src="images/clients/airbnb.svg" loading="lazy">
+                        <h6 class="my-2 bg-[#3399FE]/10 text-[12px] font-semibold uppercase px-2 py-1 rounded-md text-[#3399FF]"><i class="fas fa-briefcase me-1"></i> 6 Open Jobs</h6>
+                    </span>
+                    <h4 class="mt-2 mb-5 text-[15px] font-semibold text-[#39B54A]">airbnb</h4>
+                </a>
+                <a href="jobs.html" class="block opacity-75 hover:opacity-100"> 
+                    <span class="block text-center py-3 px-6 bg-white/60 rounded-tl-[10px] rounded-tr-[30px] rounded-bl-[30px] rounded-br-[5px] border-[1px] border-white shadow-xl hover:border-gray-200 hover:shadow-none hover:bg-white">
+                        <img class="h-8 w-auto mx-auto lg:h-10 lg:w-auto" src="images/clients/coty.svg" loading="lazy">
+                        <h6 class="my-2 bg-[#3399FE]/10 text-[12px] font-semibold uppercase px-2 py-1 rounded-md text-[#3399FF]"><i class="fas fa-briefcase me-1"></i> 6 Open Jobs</h6>
+                    </span>
+                    <h4 class="mt-2 mb-5 text-[15px] font-semibold text-[#39B54A]">COTY</h4>
+                </a>
+                <a href="jobs.html" class="block opacity-75 hover:opacity-100"> 
+                    <span class="block text-center py-3 px-6 bg-white/60 rounded-tl-[10px] rounded-tr-[30px] rounded-bl-[30px] rounded-br-[5px] border-[1px] border-white shadow-xl hover:border-gray-200 hover:shadow-none hover:bg-white">
+                        <img class="h-8 w-auto mx-auto lg:h-10 lg:w-auto" src="images/clients/lilly.png" loading="lazy">
+                        <h6 class="my-2 bg-[#3399FE]/10 text-[12px] font-semibold uppercase px-2 py-1 rounded-md text-[#3399FF]"><i class="fas fa-briefcase me-1"></i> 6 Open Jobs</h6>
+                    </span>
+                    <h4 class="mt-2 mb-5 text-[15px] font-semibold text-[#39B54A]">Lilly</h4>
+                </a>
+            </div>
+        </div>
+        <div class="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-white"></div>
+    </section>
+
+    
+    <!-- Start block -->
+    <section class="bg-white">
+        <div class="items-center max-w-screen-xl px-4 py-20 mx-auto lg:py-20">
+            <div class="lg:mb-8 mb-7 text-center">
+                <p class="table mx-auto px-2 mb-3 text-[15px] font-bold text-[#39B54A] bg-[#39B54A]/10 rounded-md">Job Cities</p>
+                <h2 class="mt-1 mb-2 text-4xl font-extrabold tracking-tight text-gray-600 text-center">Jobs by Cities</h2>
+                <p class="mb-8 font-normal text-md text-gray-500 text-center">Click on the location to reveal all jobs on that place.</p>
+            </div>
+            <div class="flex flex-wrap gap-5 items-center justify-center">
+                <a href="jobs.html" class="bg-white relative shadow-md shadow-[#3399FF]/10 rounded-full px-10 py-3 border-[#3399FF]/10 border-[1px] hover:shadow-none">
+                    <h3 class="mb-2 text-[17px] font-bold text-gray-600 text-center"><i class="fa-sharp fa-solid fa-map-location-dot text-[#FE0202] me-1"></i> Dhaka</h3>
+                    <h6 class="table mx-auto my-2 bg-[#3399FE]/10 text-[12px] font-semibold uppercase px-4 py-1 rounded-full text-[#3399FF]"><i class="fas fa-briefcase me-1"></i> 6 Open Jobs</h6>
+                </a>
+                <a href="jobs.html" class="bg-white relative shadow-md shadow-[#3399FF]/10 rounded-full px-10 py-3 border-[#3399FF]/10 border-[1px] hover:shadow-none">
+                    <h3 class="mb-2 text-[17px] font-bold text-gray-600 text-center"><i class="fa-sharp fa-solid fa-map-location-dot text-[#FE0202] me-1"></i> Narayangonj</h3>
+                    <h6 class="table mx-auto my-2 bg-[#3399FE]/10 text-[12px] font-semibold uppercase px-4 py-1 rounded-full text-[#3399FF]"><i class="fas fa-briefcase me-1"></i> 6 Open Jobs</h6>
+                </a>
+                <a href="jobs.html" class="bg-white relative shadow-md shadow-[#3399FF]/10 rounded-full px-10 py-3 border-[#3399FF]/10 border-[1px] hover:shadow-none">
+                    <h3 class="mb-2 text-[17px] font-bold text-gray-600 text-center"><i class="fa-sharp fa-solid fa-map-location-dot text-[#FE0202] me-1"></i> Sylhet</h3>
+                    <h6 class="table mx-auto my-2 bg-[#3399FE]/10 text-[12px] font-semibold uppercase px-4 py-1 rounded-full text-[#3399FF]"><i class="fas fa-briefcase me-1"></i> 6 Open Jobs</h6>
+                </a>
+                <a href="jobs.html" class="bg-white relative shadow-md shadow-[#3399FF]/10 rounded-full px-10 py-3 border-[#3399FF]/10 border-[1px] hover:shadow-none">
+                    <h3 class="mb-2 text-[17px] font-bold text-gray-600 text-center"><i class="fa-sharp fa-solid fa-map-location-dot text-[#FE0202] me-1"></i> Mymensing</h3>
+                    <h6 class="table mx-auto my-2 bg-[#3399FE]/10 text-[12px] font-semibold uppercase px-4 py-1 rounded-full text-[#3399FF]"><i class="fas fa-briefcase me-1"></i> 6 Open Jobs</h6>
+                </a>
+                <a href="jobs.html" class="bg-white relative shadow-md shadow-[#3399FF]/10 rounded-full px-10 py-3 border-[#3399FF]/10 border-[1px] hover:shadow-none">
+                    <h3 class="mb-2 text-[17px] font-bold text-gray-600 text-center"><i class="fa-sharp fa-solid fa-map-location-dot text-[#FE0202] me-1"></i> Thakurgaon</h3>
+                    <h6 class="table mx-auto my-2 bg-[#3399FE]/10 text-[12px] font-semibold uppercase px-4 py-1 rounded-full text-[#3399FF]"><i class="fas fa-briefcase me-1"></i> 6 Open Jobs</h6>
+                </a>
+                <a href="jobs.html" class="bg-white relative shadow-md shadow-[#3399FF]/10 rounded-full px-10 py-3 border-[#3399FF]/10 border-[1px] hover:shadow-none">
+                    <h3 class="mb-2 text-[17px] font-bold text-gray-600 text-center"><i class="fa-sharp fa-solid fa-map-location-dot text-[#FE0202] me-1"></i> Rangpur</h3>
+                    <h6 class="table mx-auto my-2 bg-[#3399FE]/10 text-[12px] font-semibold uppercase px-4 py-1 rounded-full text-[#3399FF]"><i class="fas fa-briefcase me-1"></i> 6 Open Jobs</h6>
+                </a>
+                <a href="jobs.html" class="bg-white relative shadow-md shadow-[#3399FF]/10 rounded-full px-10 py-3 border-[#3399FF]/10 border-[1px] hover:shadow-none">
+                    <h3 class="mb-2 text-[17px] font-bold text-gray-600 text-center"><i class="fa-sharp fa-solid fa-map-location-dot text-[#FE0202] me-1"></i> Rajshahi</h3>
+                    <h6 class="table mx-auto my-2 bg-[#3399FE]/10 text-[12px] font-semibold uppercase px-4 py-1 rounded-full text-[#3399FF]"><i class="fas fa-briefcase me-1"></i> 6 Open Jobs</h6>
+                </a>
+                <a href="jobs.html" class="bg-white relative shadow-md shadow-[#3399FF]/10 rounded-full px-10 py-3 border-[#3399FF]/10 border-[1px] hover:shadow-none">
+                    <h3 class="mb-2 text-[17px] font-bold text-gray-600 text-center"><i class="fa-sharp fa-solid fa-map-location-dot text-[#FE0202] me-1"></i> Barishal</h3>
+                    <h6 class="table mx-auto my-2 bg-[#3399FE]/10 text-[12px] font-semibold uppercase px-4 py-1 rounded-full text-[#3399FF]"><i class="fas fa-briefcase me-1"></i> 6 Open Jobs</h6>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- End block -->
+
+    <!-- Start block -->
+    <section class="relative bg-gradient-to-br from-[#3AB54B]/[0.15] via-[#ED6922]/[0.15] to-[#3399FF]/[0.15] py-20 pb-24">
+        <div class="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-white"></div>
+        <main class="mx-auto max-w-7xl">
+            <div class="md:block lg:flex items-center justify-between py-4 lg:px-0 px-4 bg-white/10 border-b border-gray-300">
+                <h1 class="text-4xl font-extrabold tracking-tight text-gray-600">Available Jobs</h1>
+                <div class="block md:flex md:mt-6 lg:mt-0 md:flex-row md:space-y-0 flex-col space-y-3 mt-4">
+                    <div>
+                        <button id="dropdownCompaniesButton" data-dropdown-toggle="dropdownCompanies" data-dropdown-placement="bottom" data-dropdown-offset-skidding="-30" class="py-2 px-5 ml-2 flex items-center text-sm font-bold text-gray-900 rounded-full hover:text-blue-600 md:mr-0 border-[#39B54A]/20 border-[2px]" type="button">
+                            Select Companies <i class="fa fa-chevron-down ml-3"></i>
+                        </button>
+                        <!-- Dropdown menu -->
+                        <div id="dropdownCompanies" class="z-10 hidden bg-white rounded-lg shadow w-60">
+                            <div class="p-3">
+                                <label for="input-group-search" class="sr-only">Search</label>
+                                <div class="relative">
+                                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                                    <svg class="w-5 h-5 text-gray-500" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+                                    </div>
+                                    <input type="text" id="input-group-search" class="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500" placeholder="Search Companies">
+                                </div>
+                            </div>
+                            <ul class="h-48 px-3 pb-3 overflow-y-auto text-sm text-gray-700" aria-labelledby="dropdownSearchButton">
+                                <li>
+                                    <div class="flex items-center pl-2 rounded hover:bg-gray-100">
+                                        <input id="checkbox-item-11" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded">
+                                        <label for="checkbox-item-11" class="w-full py-2 ml-2 text-sm font-medium text-gray-900 rounded">Three Yellow Star</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="flex items-center pl-2 rounded hover:bg-gray-100">
+                                        <input checked id="checkbox-item-12" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded">
+                                        <label for="checkbox-item-12" class="w-full py-2 ml-2 text-sm font-medium text-gray-900 rounded">Ellite Paints</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="flex items-center pl-2 rounded hover:bg-gray-100">
+                                        <input id="checkbox-item-13" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded">
+                                        <label for="checkbox-item-13" class="w-full py-2 ml-2 text-sm font-medium text-gray-900 rounded">Golden Yarn Limited</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="flex items-center pl-2 rounded hover:bg-gray-100">
+                                        <input id="checkbox-item-14" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded">
+                                        <label for="checkbox-item-14" class="w-full py-2 ml-2 text-sm font-medium text-gray-900 rounded">Next Accessories</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="flex items-center pl-2 rounded hover:bg-gray-100">
+                                        <input id="checkbox-item-15" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded">
+                                        <label for="checkbox-item-15" class="w-full py-2 ml-2 text-sm font-medium text-gray-900 rounded">WinBees</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="flex items-center pl-2 rounded hover:bg-gray-100">
+                                        <input id="checkbox-item-16" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded">
+                                        <label for="checkbox-item-16" class="w-full py-2 ml-2 text-sm font-medium text-gray-900 rounded">Nurjahans</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="flex items-center pl-2 rounded hover:bg-gray-100">
+                                        <input id="checkbox-item-17" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded">
+                                        <label for="checkbox-item-17" class="w-full py-2 ml-2 text-sm font-medium text-gray-900 rounded">Next IT Limited</label>
+                                    </div>
+                                </li>
+                            </ul>
+                            <a href="#" class="flex items-center p-3 text-sm font-medium text-red-600 border-t border-gray-200 rounded-b-lg bg-gray-50 hover:bg-gray-100 hover:underline">
+                                <i class="fa fa-trash mr-2"></i>
+                                Clear Filter
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <button id="dropdownCategoriesButton" data-dropdown-toggle="dropdownCategories" data-dropdown-placement="bottom" data-dropdown-offset-skidding="-30" class="py-2 px-5 ml-2 flex items-center text-sm font-bold text-gray-900 rounded-full hover:text-blue-600 md:mr-0 border-[#39B54A]/20 border-[2px]" type="button">
+                            Job Categories <i class="fa fa-chevron-down ml-3"></i>
+                        </button>
+                        <!-- Dropdown menu -->
+                        <div id="dropdownCategories" class="z-10 hidden bg-white rounded-lg shadow w-60">
+                            <div class="p-3">
+                                <label for="input-group-search" class="sr-only">Search</label>
+                                <div class="relative">
+                                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                                    <svg class="w-5 h-5 text-gray-500" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+                                    </div>
+                                    <input type="text" id="input-group-search" class="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500" placeholder="Search Categories">
+                                </div>
+                            </div>
+                            <ul class="h-48 px-3 pb-3 overflow-y-auto text-sm text-gray-700" aria-labelledby="dropdownSearchButton">
+                                <li>
+                                    <div class="flex items-center pl-2 rounded hover:bg-gray-100">
+                                        <input id="checkbox-item-21" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded">
+                                        <label for="checkbox-item-21" class="w-full py-2 ml-2 text-sm font-medium text-gray-900 rounded">Garments</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="flex items-center pl-2 rounded hover:bg-gray-100">
+                                        <input checked id="checkbox-item-22" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded">
+                                        <label for="checkbox-item-22" class="w-full py-2 ml-2 text-sm font-medium text-gray-900 rounded">Restaurants</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="flex items-center pl-2 rounded hover:bg-gray-100">
+                                        <input id="checkbox-item-23" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded">
+                                        <label for="checkbox-item-23" class="w-full py-2 ml-2 text-sm font-medium text-gray-900 rounded">Design & Creative</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="flex items-center pl-2 rounded hover:bg-gray-100">
+                                        <input id="checkbox-item-24" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded">
+                                        <label for="checkbox-item-24" class="w-full py-2 ml-2 text-sm font-medium text-gray-900 rounded">IT & Telecommunication</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="flex items-center pl-2 rounded hover:bg-gray-100">
+                                        <input id="checkbox-item-25" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded">
+                                        <label for="checkbox-item-25" class="w-full py-2 ml-2 text-sm font-medium text-gray-900 rounded">Banking</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="flex items-center pl-2 rounded hover:bg-gray-100">
+                                        <input id="checkbox-item-26" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded">
+                                        <label for="checkbox-item-26" class="w-full py-2 ml-2 text-sm font-medium text-gray-900 rounded">Hospitality</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="flex items-center pl-2 rounded hover:bg-gray-100">
+                                        <input id="checkbox-item-27" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded">
+                                        <label for="checkbox-item-27" class="w-full py-2 ml-2 text-sm font-medium text-gray-900 rounded">Care Center</label>
+                                    </div>
+                                </li>
+                            </ul>
+                            <a href="#" class="flex items-center p-3 text-sm font-medium text-red-600 border-t border-gray-200 rounded-b-lg bg-gray-50 hover:bg-gray-100 hover:underline">
+                                <i class="fa fa-trash mr-2"></i>
+                                Clear Filter
+                            </a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <button id="dropdownLocationsButton" data-dropdown-toggle="dropdownLocations" data-dropdown-placement="bottom" data-dropdown-offset-skidding="-30" class="py-2 px-5 ml-2 flex items-center text-sm font-bold text-gray-900 rounded-full hover:text-blue-600 md:mr-0 border-[#39B54A]/20 border-[2px]" type="button">
+                            Select Locations <i class="fa fa-chevron-down ml-3"></i>
+                        </button>
+                        <!-- Dropdown menu -->
+                        <div id="dropdownLocations" class="z-10 hidden bg-white rounded-lg shadow w-60">
+                            <div class="p-3">
+                                <label for="input-group-search" class="sr-only">Search</label>
+                                <div class="relative">
+                                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                                    <svg class="w-5 h-5 text-gray-500" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+                                    </div>
+                                    <input type="text" id="input-group-search" class="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500" placeholder="Search Locations">
+                                </div>
+                            </div>
+                            <ul class="h-48 px-3 pb-3 overflow-y-auto text-sm text-gray-700" aria-labelledby="dropdownSearchButton">
+                                <li>
+                                    <div class="flex items-center pl-2 rounded hover:bg-gray-100">
+                                    <input id="checkbox-item-1" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded">
+                                    <label for="checkbox-item-1" class="w-full py-2 ml-2 text-sm font-medium text-gray-900 rounded">Dhaka</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="flex items-center pl-2 rounded hover:bg-gray-100">
+                                        <input checked id="checkbox-item-2" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded">
+                                        <label for="checkbox-item-2" class="w-full py-2 ml-2 text-sm font-medium text-gray-900 rounded">Gazipur</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="flex items-center pl-2 rounded hover:bg-gray-100">
+                                    <input id="checkbox-item-3" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded">
+                                    <label for="checkbox-item-3" class="w-full py-2 ml-2 text-sm font-medium text-gray-900 rounded">Narayangonj</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="flex items-center pl-2 rounded hover:bg-gray-100">
+                                    <input id="checkbox-item-4" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded">
+                                    <label for="checkbox-item-4" class="w-full py-2 ml-2 text-sm font-medium text-gray-900 rounded">Tangail</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="flex items-center pl-2 rounded hover:bg-gray-100">
+                                    <input id="checkbox-item-5" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded">
+                                    <label for="checkbox-item-5" class="w-full py-2 ml-2 text-sm font-medium text-gray-900 rounded">Mymensing</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="flex items-center pl-2 rounded hover:bg-gray-100">
+                                    <input id="checkbox-item-6" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded">
+                                    <label for="checkbox-item-6" class="w-full py-2 ml-2 text-sm font-medium text-gray-900 rounded">Rajshahi</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="flex items-center pl-2 rounded hover:bg-gray-100">
+                                    <input id="checkbox-item-7" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded">
+                                    <label for="checkbox-item-7" class="w-full py-2 ml-2 text-sm font-medium text-gray-900 rounded">Chittagong</label>
+                                    </div>
+                                </li>
+                            </ul>
+                            <a href="#" class="flex items-center p-3 text-sm font-medium text-red-600 border-t border-gray-200 rounded-b-lg bg-gray-50 hover:bg-gray-100 hover:underline">
+                                <i class="fa fa-trash mr-2"></i>
+                                Clear Filter
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <select id="countries" class="py-2 px-5 ml-2 flex items-center text-sm font-bold text-gray-900 rounded-full hover:text-blue-600 md:mr-0 border-[#39B54A]/20 border-[2px] bg-transparent">
+                            <option selected>Short By</option>
+                            <option value="US">Most Relevant</option>
+                            <option value="CA">Newest</option>
+                            <option value="FR">Oldest</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div class="max-w-screen-xl py-8 mx-auto">
+            <div class="bg-white relative shadow-[0px_0px_25px_rgba(56,152,226,0.1)] rounded-[10px] px-[15px] py-[10px]">
+                <h2 class="mt-3 mb-4 text-md md:text-xl font-bold text-center text-gray-500">Found 30 jobs relevant on your search</h2>
+                <div class="flex flex-col">
+                    <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+                        <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
+                            <div class="overflow-hidden">
+                                <table class="min-w-full text-sm font-base text-gray-600 text-center">
+                                    <thead class="font-medium bg-[#f0f0f0]">
+                                        <tr>
+                                            <th scope="col" class="px-6 py-2">No.</th>
+                                            <th scope="col" class="px-6 py-2">Job Post</th>
+                                            <th scope="col" class="px-6 py-2">Job Category</th>
+                                            <th scope="col" class="px-6 py-2">Vacancy</th>
+                                            <th scope="col" class="px-6 py-2">Deadline</th>
+                                            <th scope="col" class="px-6 py-2">Apply</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="whitespace-nowrap px-6 py-2 font-medium">01</td>
+                                            <td class="whitespace-nowrap px-6 py-2 text-[16px] font-semibold text-[#444]">
+                                                <a class="text-[#39B54A] hover:underline" href="apply.html">Software Engineer</a>
+                                            </td>
+                                            <td class="whitespace-nowrap px-6 py-2">Software</td>
+                                            <td class="whitespace-nowrap px-6 py-2">11</td>
+                                            <td class="whitespace-nowrap px-6 py-2">10 April, 2024</td>
+                                            <td class="whitespace-nowrap px-6 py-2">
+                                                <a href="apply.html" target="_blank"><i class="fas fa-arrow-up-right-from-square rounded-full h-[43px] w-[43px] leading-[43px] text-center text-[#ffffff] bg-[#3298FF] hover:bg-[#000]"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr class="bg-[#edf6ff]">
+                                            <td class="whitespace-nowrap px-6 py-2 font-medium">02</td>
+                                            <td class="whitespace-nowrap px-6 py-2 text-[16px] font-semibold text-[#444]">
+                                                <a class="text-[#39B54A] hover:underline" href="apply.html">Senior Quality Assurance</a>
+                                            </td>
+                                            <td class="whitespace-nowrap px-6 py-2">Software</td>
+                                            <td class="whitespace-nowrap px-6 py-2">03</td>
+                                            <td class="whitespace-nowrap px-6 py-2">07 January, 2024</td>
+                                            <td class="whitespace-nowrap px-6 py-2">
+                                                <a href="apply.html" target="_blank"><i class="fas fa-arrow-up-right-from-square rounded-full h-[43px] w-[43px] leading-[43px] text-center text-[#ffffff] bg-[#3298FF] hover:bg-[#000]"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="whitespace-nowrap px-6 py-2 font-medium">03</td>
+                                            <td class="whitespace-nowrap px-6 py-2 text-[16px] font-semibold text-[#444]">
+                                                <a class="text-[#39B54A] hover:underline" href="apply.html">System Analyst</a>
+                                            </td>
+                                            <td class="whitespace-nowrap px-6 py-2">Software</td>
+                                            <td class="whitespace-nowrap px-6 py-2">09</td>
+                                            <td class="whitespace-nowrap px-6 py-2">24 March, 2024</td>
+                                            <td class="whitespace-nowrap px-6 py-2">
+                                                <a href="apply.html" target="_blank"><i class="fas fa-arrow-up-right-from-square rounded-full h-[43px] w-[43px] leading-[43px] text-center text-[#ffffff] bg-[#3298FF] hover:bg-[#000]"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr class="bg-[#edf6ff]">
+                                            <td class="whitespace-nowrap px-6 py-2 font-medium">04</td>
+                                            <td class="whitespace-nowrap px-6 py-2 text-[16px] font-semibold text-[#444]">
+                                                <a class="text-[#39B54A] hover:underline" href="apply.html">System Support Engineer</a>
+                                            </td>
+                                            <td class="whitespace-nowrap px-6 py-2">Software</td>
+                                            <td class="whitespace-nowrap px-6 py-2">17</td>
+                                            <td class="whitespace-nowrap px-6 py-2">07 May, 2024</td>
+                                            <td class="whitespace-nowrap px-6 py-2">
+                                                <a href="apply.html" target="_blank"><i class="fas fa-arrow-up-right-from-square rounded-full h-[43px] w-[43px] leading-[43px] text-center text-[#ffffff] bg-[#3298FF] hover:bg-[#000]"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="whitespace-nowrap px-6 py-2 font-medium">05</td>
+                                            <td class="whitespace-nowrap px-6 py-2 text-[16px] font-semibold text-[#444]">
+                                                <a class="text-[#39B54A] hover:underline" href="apply.html">Software Engineer</a>
+                                            </td>
+                                            <td class="whitespace-nowrap px-6 py-2">Software</td>
+                                            <td class="whitespace-nowrap px-6 py-2">11</td>
+                                            <td class="whitespace-nowrap px-6 py-2">17 April, 2024</td>
+                                            <td class="whitespace-nowrap px-6 py-2">
+                                                <a href="apply.html" target="_blank"><i class="fas fa-arrow-up-right-from-square rounded-full h-[43px] w-[43px] leading-[43px] text-center text-[#ffffff] bg-[#3298FF] hover:bg-[#000]"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr class="bg-[#edf6ff]">
+                                            <td class="whitespace-nowrap px-6 py-2 font-medium">06</td>
+                                            <td class="whitespace-nowrap px-6 py-2 text-[16px] font-semibold text-[#444]">
+                                                <a class="text-[#39B54A] hover:underline" href="apply.html">Senior Quality Assurance</a>
+                                            </td>
+                                            <td class="whitespace-nowrap px-6 py-2">Software</td>
+                                            <td class="whitespace-nowrap px-6 py-2">03</td>
+                                            <td class="whitespace-nowrap px-6 py-2">10 January, 2024</td>
+                                            <td class="whitespace-nowrap px-6 py-2">
+                                                <a href="apply.html" target="_blank"><i class="fas fa-arrow-up-right-from-square rounded-full h-[43px] w-[43px] leading-[43px] text-center text-[#ffffff] bg-[#3298FF] hover:bg-[#000]"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="whitespace-nowrap px-6 py-2 font-medium">07</td>
+                                            <td class="whitespace-nowrap px-6 py-2 text-[16px] font-semibold text-[#444]">
+                                                <a class="text-[#39B54A] hover:underline" href="apply.html">System Analyst</a>
+                                            </td>
+                                            <td class="whitespace-nowrap px-6 py-2">Software</td>
+                                            <td class="whitespace-nowrap px-6 py-2">09</td>
+                                            <td class="whitespace-nowrap px-6 py-2">07 May, 2024</td>
+                                            <td class="whitespace-nowrap px-6 py-2">
+                                                <a href="apply.html" target="_blank"><i class="fas fa-arrow-up-right-from-square rounded-full h-[43px] w-[43px] leading-[43px] text-center text-[#ffffff] bg-[#3298FF] hover:bg-[#000]"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr class="bg-[#edf6ff]">
+                                            <td class="whitespace-nowrap px-6 py-2 font-medium">08</td>
+                                            <td class="whitespace-nowrap px-6 py-2 text-[16px] font-semibold text-[#444]">
+                                                <a class="text-[#39B54A] hover:underline" href="apply.html">System Support Engineer</a>
+                                            </td>
+                                            <td class="whitespace-nowrap px-6 py-2">Software</td>
+                                            <td class="whitespace-nowrap px-6 py-2">17</td>
+                                            <td class="whitespace-nowrap px-6 py-2">07 March, 2024</td>
+                                            <td class="whitespace-nowrap px-6 py-2">
+                                                <a href="apply.html" target="_blank"><i class="fas fa-arrow-up-right-from-square rounded-full h-[43px] w-[43px] leading-[43px] text-center text-[#ffffff] bg-[#3298FF] hover:bg-[#000]"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="whitespace-nowrap px-6 py-2 font-medium">09</td>
+                                            <td class="whitespace-nowrap px-6 py-2 text-[16px] font-semibold text-[#444]">
+                                                <a class="text-[#39B54A] hover:underline" href="apply.html">System Analyst</a>
+                                            </td>
+                                            <td class="whitespace-nowrap px-6 py-2">Software</td>
+                                            <td class="whitespace-nowrap px-6 py-2">09</td>
+                                            <td class="whitespace-nowrap px-6 py-2">07 May, 2024</td>
+                                            <td class="whitespace-nowrap px-6 py-2">
+                                                <a href="apply.html" target="_blank"><i class="fas fa-arrow-up-right-from-square rounded-full h-[43px] w-[43px] leading-[43px] text-center text-[#ffffff] bg-[#3298FF] hover:bg-[#000]"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr class="bg-[#edf6ff]">
+                                            <td class="whitespace-nowrap px-6 py-2 font-medium">10</td>
+                                            <td class="whitespace-nowrap px-6 py-2 text-[16px] font-semibold text-[#444]">
+                                                <a class="text-[#39B54A] hover:underline" href="apply.html">System Support Engineer</a>
+                                            </td>
+                                            <td class="whitespace-nowrap px-6 py-2">Software</td>
+                                            <td class="whitespace-nowrap px-6 py-2">17</td>
+                                            <td class="whitespace-nowrap px-6 py-2">07 March, 2024</td>
+                                            <td class="whitespace-nowrap px-6 py-2">
+                                                <a href="apply.html" target="_blank"><i class="fas fa-arrow-up-right-from-square rounded-full h-[43px] w-[43px] leading-[43px] text-center text-[#ffffff] bg-[#3298FF] hover:bg-[#000]"></i></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <nav class="table my-4 mx-auto">
+                    <a href="jobs.html" class="block py-4 px-12 text-white bg-[#39B54A] hover:bg-[#2ea23e] focus:ring-[#fff] rounded-full text-sm uppercase font-bold focus:outline-none focus:ring-[#e9e9e9]">Explore All</a>
+                </nav>
+            </div>
+        </div>
+        <div class="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-white"></div>
+    </section>
+    <!-- End block -->
+    
+    <!-- Start block -->
+    <section class="bg-white">
+        <div class="px-4 py-20 lg:py-24 lg:grid lg:grid-cols-12 items-center max-w-screen-xl mx-auto">
+            <div class="col-span-4 lg:mb-0 mb-14">
+                <div class="flex justify-center">
+                    <img class="snap-center" src="./images/faq.png" alt="img"/>
+                </div>
+            </div>
+            <div class="col-span-8">
+                <div class="max-w-screen mx-auto">
+                    <p class="table px-2 mb-3 text-[15px] font-bold text-[#39B54A] bg-[#39B54A]/10 rounded-md">FAQ</p>
+                    <h2 class="mb-3 text-3xl font-bold leading-tight tracking-tight text-gray-600 ">Frequently Ask Questions</h2>
+                    <p class="mb-6 text-lg font-medium text-gray-500">We found answers of those Questions regarding job</p>
+                    <div class="max-w-screen mx-auto">
+                        <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-white text-gray-900" data-inactive-classes="text-[#39B54A]">
+                            <h3 id="accordion-flush-heading-1">
+                                <button type="button" class="flex items-center justify-between w-full py-3 text-[15px] font-semibold text-left text-gray-900 bg-white border-b border-[#e5e5e5]" data-accordion-target="#accordion-flush-body-1" aria-expanded="true" aria-controls="accordion-flush-body-1">
+                                    <span>Can I use Landwind in open-source projects?</span>
+                                    <svg data-accordion-icon="" class="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                </button>
+                            </h3>
+                            <div id="accordion-flush-body-1" class="ease-in-out duration-300" aria-labelledby="accordion-flush-heading-1">
+                                <div class="py-5 border-b bborder-[#e5e5e5]">
+                                    <p class="mb-2 text-sm text-gray-500">Landwind is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.</p>
+                                    <p class="text-sm text-gray-500">Check out this guide to learn how to get started and start developing websites even faster with components on top of Tailwind CSS.</p>
+                                </div>
+                            </div>
+                            <h3 id="accordion-flush-heading-2">
+                                <button type="button" class="flex items-center justify-between w-full py-3 text-left text-gray-500 border-b border-[#e5e5e5] text-[15px] font-semibold" data-accordion-target="#accordion-flush-body-2" aria-expanded="false" aria-controls="accordion-flush-body-2">
+                                    <span>Is there a Figma file available?</span>
+                                    <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                </button>
+                            </h3>
+                            <div id="accordion-flush-body-2" class="hidden" aria-labelledby="accordion-flush-heading-2">
+                                <div class="py-5 border-b border-[#e5e5e5]">
+                                    <p class="mb-2 text-sm text-gray-500">Landwind is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file. Check out the Figma design system</a> based on the utility classes from Tailwind CSS and components from Landwind.</p>
+                                </div>
+                            </div>
+                            <h3 id="accordion-flush-heading-3">
+                                <button type="button" class="flex items-center justify-between w-full py-3 text-left text-gray-500 border-b border-[#e5e5e5] text-[15px] font-semibold" data-accordion-target="#accordion-flush-body-3" aria-expanded="false" aria-controls="accordion-flush-body-3">
+                                    <span>What are the differences between Landwind and Tailwind UI?</span>
+                                    <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                </button>
+                            </h3>
+                            <div id="accordion-flush-body-3" class="hidden" aria-labelledby="accordion-flush-heading-3">
+                                <div class="py-5 border-b border-[#e5e5e5]">
+                                    <p class="mb-2 text-sm text-gray-500">The main difference is that the core components from Landwind are open source under the MIT license, whereas Tailwind UI is a paid product. Another difference is that Landwind relies on smaller and standalone components, whereas Tailwind UI offers sections of pages.</p>
+                                    <p class="mb-2 text-sm text-gray-500">However, we actually recommend using both Landwind, Landwind Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
+                                    <p class="mb-2 text-sm text-gray-500">Learn more about these technologies:</p>
+                                </div>
+                            </div>
+                            <h3 id="accordion-flush-heading-4">
+                                <button type="button" class="flex items-center justify-between w-full py-3 text-left text-gray-500 border-b border-[#e5e5e5] text-[15px] font-semibold" data-accordion-target="#accordion-flush-body-4" aria-expanded="false" aria-controls="accordion-flush-body-4">
+                                    <span>What about browser support?</span>
+                                    <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                </button>
+                            </h3>
+                            <div id="accordion-flush-body-4" class="hidden" aria-labelledby="accordion-flush-heading-4">
+                                <div class="py-5 border-b border-[#e5e5e5]">
+                                    <p class="mb-2 text-sm text-gray-500">The main difference is that the core components from Landwind are open source under the MIT license, whereas Tailwind UI is a paid product. Another difference is that Landwind relies on smaller and standalone components, whereas Tailwind UI offers sections of pages.</p>
+                                    <p class="mb-2 text-sm text-gray-500">However, we actually recommend using both Landwind, Landwind Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
+                                    <p class="mb-2 text-sm text-gray-500">Learn more about these technologies:</p>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End block -->
+
+    <footer class="bg-gray-100 relative">
+        <div class="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-white"></div>
+        <div class="max-w-screen-xl p-4 py-6 mx-auto lg:py-20 md:p-8 lg:p-10">
+            <div class="text-center">
+                <a href="#" class="flex items-center justify-center mb-5 text-2xl font-semibold text-gray-900">
+                    <img src="./images/logo.png" class="h-6 mr-3 sm:h-9" alt="Landwind Logo" />
+                </a>
+                <span class="block text-sm text-center tracking-wide text-gray-600">© 2024 Next Job Portal. All Rights Reserved. Built by <a href="https://nextitltd.com/" class="text-[#3298FF] hover:underline"> Next IT Team.</a>
+                </span>
+                <ul class="flex justify-center mt-5 space-x-5">
+                    <li>
+                        <a href="#" class="text-gray-500 hover:text-gray-900">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-500 hover:text-gray-900">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-500 hover:text-gray-900">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-500 hover:text-gray-900">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-500 hover:text-gray-900">
+                            <i class="fab fa-google"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/flowbite.min.js"></script>
+</body>
+</html>

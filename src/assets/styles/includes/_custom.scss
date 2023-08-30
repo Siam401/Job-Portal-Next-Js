@@ -1,0 +1,12 @@
+/*---------------------------------------------------------------------
+    Applications summary tab styles
+----------------------------------------------------------------------*/
+.set-disable {
+    input,
+    select,
+    textarea {
+        pointer-events: none;
+        border: 1px solid grey;
+        background-color: lightgrey;
+    }
+}

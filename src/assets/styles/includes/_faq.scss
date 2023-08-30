@@ -1,0 +1,44 @@
+
+
+//========FAQ-SCSS=========>
+.job-faq{
+    .p-accordion {
+        .p-accordion-header{
+            .p-accordion-header-link {
+                @apply w-full px-0 py-4 pe-6 text-gray-600 border-0 text-[15px] font-semibold bg-transparent rounded-none;
+                @apply border-b #{!important};
+                @apply border-[#e5e5e5] #{!important};
+                .p-accordion-toggle-icon{
+                    @apply absolute right-0;
+                }
+                .p-accordion-header-text{
+                    @apply leading-[18px];
+                }
+            }
+            &:not(.p-disabled){
+                &.p-highlight {
+                    .p-accordion-header-link {
+                        @apply border-0 bg-transparent text-[#39B54A];
+                    }
+                }
+                &:hover{
+                    .p-accordion-header-link {
+                        @apply border-0 bg-transparent text-gray-900;
+                    }
+                }
+                .p-accordion-header-link{
+                    &:focus{
+                        @apply shadow-none;
+                    }
+                }
+            }
+        }
+        .p-accordion-tab{
+            @apply m-0;
+        }
+        .p-accordion-content {
+            @apply px-0 py-5 border-0 text-sm text-gray-600 rounded-none;
+            @apply border-b #{!important};
+        }
+    }
+}

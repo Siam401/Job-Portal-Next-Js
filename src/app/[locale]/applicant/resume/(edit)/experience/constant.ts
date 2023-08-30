@@ -1,0 +1,18 @@
+export const defaultValues = {
+  category: '',
+  is_fresher: false,
+  id: null,
+  company_name: '',
+  company_business: '',
+  designation: '',
+  department: '',
+  start_date: '',
+  end_date: '',
+  location: '',
+  is_current: false,
+  responsibility: '',
+  expertise: [],
+  expertise_name: '',
+  expertise_year: 0,
+  expertise_month: 0,
+};

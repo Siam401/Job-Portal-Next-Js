@@ -1,0 +1,106 @@
+
+
+//========Job Filter=========>
+.job-multiSelect{
+    .p-multiselect {
+        .p-multiselect-label{
+            @apply p-0;
+            @apply text-gray-900 #{!important};
+            &:hover{
+                @apply text-blue-600 #{!important};
+            }
+        }
+        &:hover{
+            .p-multiselect-label{
+                @apply text-blue-600 #{!important};
+            }
+        }
+        &:not(.p-disabled){
+            &:hover {
+                @apply border-[#39B54A]/30 #{!important};
+            }
+            &.p-focus{
+                @apply shadow-none;
+                @apply border-[#39B54A]/30 #{!important};
+            }
+        }
+        .p-multiselect-trigger {
+            @apply w-auto;
+        }
+    }
+}
+
+.job-dropDown{
+    .p-dropdown {
+        @apply h-auto;
+        .p-dropdown-label {
+            @apply text-sm h-auto;
+            @apply p-0 #{!important};
+            @apply text-gray-900 #{!important};
+            &:hover{
+                @apply text-blue-600 #{!important};
+            }
+        }
+        &:hover{
+            .p-dropdown-label{
+                @apply text-blue-600 #{!important};
+            }
+        }
+        .p-dropdown-trigger {
+            @apply w-auto;
+        }
+        &:not(.p-disabled){
+            &:hover {
+                @apply border-[#39B54A]/30 #{!important};
+            }
+            &.p-focus{
+                @apply shadow-none;
+                @apply border-[#39B54A]/30 #{!important};
+            }
+        }
+    }
+}
+
+#search{
+    &.p-inputtext{
+        @apply h-auto;
+        &:enabled{
+            &:hover {
+                @apply border-[#39B54A]/30;
+            }
+            &:focus {
+                @apply shadow-none border-[#39B54A]/70
+            }
+        }
+    }
+}
+
+
+
+
+//========Job-Table=========>
+.job-table{
+    .p-datatable-table {
+        thead{
+            th{
+                @apply py-2 px-6 text-sm font-bold text-gray-600 text-center border-0;
+                @apply bg-[#f0f0f0] #{!important};
+                .p-column-header-content{
+                    @apply block;
+                }
+            }
+        }
+        tbody{
+            td{
+                @apply py-2 px-6 text-sm text-gray-600 text-center border-0;
+            }
+        }
+    }
+    .p-datatable.p-datatable-striped {
+        .p-datatable-tbody > tr.p-row-odd {
+            @apply bg-[#edf6ff];
+        }
+    }
+}
+
+
