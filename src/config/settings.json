@@ -1,0 +1,15 @@
+{
+    "isGroupCompany": 1,
+    "isNgo": 1,
+    "hasBranch": 1,
+    "maintenanceMode": 1,
+    "maintenanceText": "Site is under maintenance. Please come back later.",
+    "socialAuth": {
+        "GOOGLE_CLIENT_ID": "",
+        "GOOGLE_CLIENT_SECRET": "",
+        "FACEBOOK_CLIENT_ID": "",
+        "FACEBOOK_CLIENT_SECRET": "",
+        "LINKEDIN_CLIENT_ID": "",
+        "LINKEDIN_CLIENT_SECRET": ""
+    }
+}

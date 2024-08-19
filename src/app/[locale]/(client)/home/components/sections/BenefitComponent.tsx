@@ -29,7 +29,7 @@ export default function BenefitComponent({ benefitSectionData }: any) {
               <div className="flex place-items-center">
                 <a
                   target="blank"
-                  href="https://nextitltd.com/contact.php"
+                  href="/contact.php"
                   className="text-base font-semibold text-[#3298FF] hover:text-[#000]"
                 >
                   Contact Us

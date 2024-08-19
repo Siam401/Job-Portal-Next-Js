@@ -16,7 +16,7 @@ const Header = async ({ data }: HeaderProps) => {
     { href: '/jobs', name: 'Jobs' },
     { href: '/how-to', name: 'How to Apply' },
     { href: '/faq', name: 'FAQ' },
-    { href: 'http://nextitltd.com/', name: 'Return to Main Website' },
+    { href: '', name: 'Return to Main Website' },
   ];
 
   return (
